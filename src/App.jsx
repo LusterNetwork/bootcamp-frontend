@@ -12,6 +12,7 @@ import {
 } from "./pages";
 import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
+import NewBootCamp from "./pages/bootcamps/NewBootcamp";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="bootcamps">
             <Route path="ethereum" element={<Ethereum />} />
+            <Route path="newbootcamp" element={<NewBootCamp />} />
           </Route>
         </Routes>
         <Footer />

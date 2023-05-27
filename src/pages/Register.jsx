@@ -150,7 +150,7 @@ const Register = () => {
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">Phone Number*</p>
                   <input
-                    placeholder="7070707070"
+                    placeholder="+911234567890"
                     onChange={(e) =>
                       setUser({ ...user, phone_no: e.target.value })
                     }
