@@ -4,17 +4,16 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Registeration_Modal from "./Registeration_Modal";
 
-const Register = () => {
+const NewBootCampRegister = () => {
   const [user, setUser] = useState({
     name: "",
     phone_no: "",
     email: "",
     experience: "",
     coupon: "",
-    bootcamp: "",
   });
   const [loading, setLoading] = useState(false);
-  const[isOpen,setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,10 +43,6 @@ const Register = () => {
       errors.experience = "Please select your experience level";
     }
 
-    if (!user.bootcamp) {
-      errors.bootcamp = "Please select your bootcamp preference";
-    }
-
     if (Object.keys(errors).length > 0) {
       // Display error messages for the user
       const errorMessages = Object.values(errors).join(", ");
@@ -67,24 +62,25 @@ const Register = () => {
     sendRequest();
   };
 
-  const sendRequest=async()=>{
+  const sendRequest = async () => {
     try {
-      const res= await axios.post("http://localhost:5003/",{
-      name:user.name,
-      email:user.email,
-      phoneNumber:user.phone_no,
-      experience:user.experience,
-      bootcamp:user.bootcamp,
-      coupon:user.coupon
-    })
+      const res = await axios.post("http://localhost:5003/", {
+        name: user.name,
+        email: user.email,
+        phoneNumber: user.phone_no,
+        experience: user.experience,
+        bootcamp: user.bootcamp,
+        coupon: user.coupon,
+      });
+      console.log(res.data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
       toast.error(`Error : ${error}`, {
         position: "bottom-center",
         autoClose: 5000,
-      })
+      });
     }
-  }
+  };
 
   return (
     <>
@@ -157,25 +153,6 @@ const Register = () => {
                   </select>
                 </div>
 
-                <div className="">
-                  <p className="ml-2 mb-2 text-[16px]">
-                    Registering for bootcamp*
-                  </p>
-                  <select
-                    required={true}
-                    defaultValue="Experience Level"
-                    onChange={(e) =>
-                      setUser({ ...user, bootcamp: e.target.value })
-                    }
-                    value={user.bootcamp}
-                    placeholder="Experiance"
-                    className=" bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
-                  >
-                    <option value="Select bootcamp">Select bootcamp</option>
-                    <option value="Ethereum">Ethereum</option>
-                  </select>
-                </div>
-
                 <div>
                   <p className="ml-2 mb-2 text-[16px]">Coupon Code</p>
                   <input
@@ -195,15 +172,15 @@ const Register = () => {
                   onClick={handleSubmit}
                   className="mx-auto bg-gradient-to-r from-indigo-600 to-blue-600 px-[3rem] py-[0.5rem] rounded-md shadow-md md:text-[16px]"
                 >
-                  {loading ? "Loading..." : "SUBMIT"}
+                  {loading ? "Loading..." : "Pay Now"}
                 </button>
               </form>
             </div>
           </div>
         </div>
       </div>
-      {isOpen && <Registeration_Modal/>}
+      {isOpen && <Registeration_Modal />}
     </>
   );
 };
-export default Register;
+export default NewBootCampRegister;

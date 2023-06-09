@@ -12,6 +12,10 @@ import {
 } from "./pages";
 import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
+import NewBootCamp from "./pages/bootcamps/NewBootcamp";
+import ExcelDownload from "./pages/ExcelDownload";
+import NewBootCampRegister from "./pages/NewBootCampRegister";
+import Paytm from "./pages/Paytm";
 
 const App = () => {
   return (
@@ -19,16 +23,20 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
+        <Route path="/download/excel" element={<ExcelDownload />} />
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/newbootcampregister" element={<NewBootCampRegister />} />
           <Route path="/aboutus" element={<AboutUS />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/dcma" element={<DCMA />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
+            <Route path="paytm" element={<Paytm />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="bootcamps">
             <Route path="ethereum" element={<Ethereum />} />
+            <Route path="newbootcamp" element={<NewBootCamp />} />
           </Route>
         </Routes>
         <Footer />
