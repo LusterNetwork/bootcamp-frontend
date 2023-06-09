@@ -23,7 +23,7 @@ const Header = () => {
     <>
     <nav className='w-[100%] z-50 top-0 shadow-md bg-neutral-900 bg-opacity-70 backdrop-blur-xl fixed text-[20px]'>
     <div className="bg-slate-400">
-      <Timer/>
+      {/* <Timer/> */}
     </div>
       <div className="py-5 sm:px-5 flex flex-row items-center justify-between px-3 md:px-24 m-auto">
           <div onClick={gotohome} className="cursor-pointer flex items-center gap-2">
@@ -41,7 +41,7 @@ const Header = () => {
             <div className="hidden md:block" >
                   <ul className="flex gap-8">
                   <li className="cursor-pointer hover:underline transition-all">
-                  <Link to="/bootcamps/newbootcamp" className="animate-blink font-semibold text-2xl  text-cyan-500">New Bootcamp!</Link>
+                  <Link to="https://poc.luster.network/" className="animate-blink font-semibold text-2xl  text-cyan-500">POE</Link>
                   </li>
                     <li className="cursor-pointer hover:underline transition-all hover:underline-offset-4">
                       <Link to="/bootcamps/ethereum" className="">Bootcamp</Link>

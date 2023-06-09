@@ -69,7 +69,7 @@ const NewBootCamp = () => {
             </div>
                 <p className='mt-8 text-xl md:text-2xl'>We are on the mission to upskill 1M+ Web3 enthusiasts to Web3 developers by 2025</p>
             <div className="button md:mt-8 mt-4">
-                <a href={"/register"} className='h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '><button>Book now !</button></a>
+                <a href={"/newbootcampregister"} className='h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '><button>Book now !</button></a>
             </div>
         </div>
 
@@ -112,7 +112,7 @@ const NewBootCamp = () => {
                 </div>
 
                 <div className="button mt-4">
-                    <a href="/register" className='h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center'><button>Book now !</button></a>
+                    <a href="/newbootcampregister" className='h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center'><button>Book now !</button></a>
                 </div>
 
             </div>
@@ -187,7 +187,7 @@ const NewBootCamp = () => {
                     <span className='text-3xl md:text-5xl font-semibold'>Thinking about switching career?</span>
                     <p className='text-2xl md:text-2xl mt-3'>Pick Web3 development!</p>
                     <p className='text-xl md:text-3xl my-8 md:my-12'>What is holding you back?</p>
-                    <Link to='/register' className='h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center'>
+                    <Link to='/newbootcampregister' className='h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center'>
                         Book now!
                     </Link>
                 </div>
@@ -315,7 +315,7 @@ const NewBootCamp = () => {
                     </div>
                     
                     <Link 
-                    to='/register' 
+                    to='/newbootcampregister' 
                     className='h-[4rem] text-3xl transform duration-500 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center animate-bounce hover:animate-none hover:scale-125 transition-all'
                     >
                     Book now!

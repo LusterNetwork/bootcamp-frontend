@@ -33,9 +33,9 @@ const Ethereum = () => {
     }
     const mentorHandler = () => {
         setContent('Mentor')
-        setSource('/assets/backbone/mentor.jpg')
-        setName('Akshay Kurhekar')
-        setLinkedin('https://www.linkedin.com/in/akshay-kurhekar-64438a168')
+        setSource('/assets/backbone/mentor.jpeg')
+        setName('Mohit Rakhade')
+        setLinkedin('https://www.linkedin.com/in/mohit-rakhade/')
     }
     const programmanagerHandler = () => {
         setContent('Programmanager')
