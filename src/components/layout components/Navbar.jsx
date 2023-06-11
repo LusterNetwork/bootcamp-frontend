@@ -43,6 +43,9 @@ const Header = () => {
                   <li className="cursor-pointer hover:underline transition-all">
                   <Link to="https://poc.luster.network/" className="animate-blink font-semibold text-2xl  text-cyan-500">POE</Link>
                   </li>
+                  <li className="cursor-pointer hover:underline transition-all">
+                  <Link to="/tokentrivia" className="">Token Trivia</Link>
+                  </li>
                     <li className="cursor-pointer hover:underline transition-all hover:underline-offset-4">
                       <Link to="/bootcamps/ethereum" className="">Bootcamp</Link>
                     </li>
