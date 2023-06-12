@@ -105,17 +105,32 @@ const Home = () => {
         </div>
         
         </div>
+{/* POE section */}
+
+<section id='bootcamp' className='md:p-12 flex justify-center items-center'>
+  <div className='box-content bg-gradient-to-r text-center flex flex-col justify-center
+   from-[#9374DC] to-[#58AFEF] rounded-md w-[65%]'>
+  <p className="text-5xl mt-12 mx-10 md:text-3xl font-semibold" style={{ lineHeight: '3rem' }}>
+  Creating Community for all Web3 Developer and Enthusiast Around the Globe for free,
+  you must need to
+</p>
+<div>
+    <Link to="https://poc.luster.network/">
+<button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 
+hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 
+dark:focus:ring-cyan-800 font-medium rounded-lg text-2xl 
+px-5 py-2.5 text-center mr-2 my-8">Check Out</button>
+</Link>
+</div>
+  </div>
+</section>
 
 
         {/* bootcamp section */}
         <section id='bootcamp' className='md:p-24 '>
             <div className='box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF] rounded-md'>
-
                 <p className='text-5xl mt-24 md:text-7xl font-semibold'>Bootcamps</p>
-
                 <div className='grid grid-cols-1 md:grid-cols-1 gap-6 py-16 mb-24'>
-
-               
                 <div className='bg-black flex flex-col items-center col-span-1 p-4 place-self-center rounded-3xl hover:cursor-pointer  md:w-[20%] animate-pulse hover:animate-none hover:scale-125 transition-all'>
                     <Link to='/bootcamps/ethereum'>
                     <img src='/assets/ethereum.png' alt="ethereum" width={200} height={200} className='w-[80%] mx-auto' />
@@ -123,9 +138,7 @@ const Home = () => {
                     <p className='text-2xl font-semibold'>(click to explore)</p>
                     </Link>
                 </div>
-
                 </div>
-
             </div>
         </section>
 
