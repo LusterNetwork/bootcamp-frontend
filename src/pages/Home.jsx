@@ -275,6 +275,19 @@ const Home = () => {
                 <img src='/assets/ethereum.png' height={90} width={90}/>
                 <h1 className='font-semibold text-3xl text-blue-400'>Ethereum</h1>
             </article>
+            {/* new partners */}
+            <article className='flex gap-4 items-center'>
+                <img src='/assets/code8.jpeg' height={90} width={90}/>
+                <h1 className='font-semibold text-3xl text-blue-400'>Code8</h1>
+            </article>
+            <article className='flex gap-4 items-center'>
+                <img src='/assets/Mentorle.jpeg' height={90} width={90}/>
+                <h1 className='font-semibold text-3xl text-white'>Mentorle</h1>
+            </article>
+            <article className='flex gap-4 items-center'>
+                <img src='/assets/bananasdk.jpeg' height={90} width={90}/>
+                <h1 className='font-semibold text-3xl text-yellow-300'>Banana SDK</h1>
+            </article>
             </section>
         </section>
 
