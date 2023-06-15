@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     // Regular expressions for email and phone number format
     const emailRegex = /^\S+@\S+\.\S+$/;
-    const phoneRegex = /^\d{10}$/;
+    const phoneRegex = /^(\+?\d{1,3}[-. ]?)?\d{10}$/;
     // Object to store error messages
     const errors = {};
 
@@ -126,7 +126,7 @@ const Register = () => {
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">Phone Number*</p>
                   <input
-                    placeholder="+911234567890"
+                    placeholder="Enter your phone number "
                     onChange={(e) =>
                       setUser({ ...user, phone_no: e.target.value })
                     }

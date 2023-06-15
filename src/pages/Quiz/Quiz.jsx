@@ -89,9 +89,9 @@ const Quiz = () => {
       </div>
       <div className="my-4">
         <h1 className="text-2xl font-bold">
-          {questions[currentQuestion]?.question}
+        {`Q.${currentQuestion+1}`} &nbsp; {questions[currentQuestion]?.question}
         </h1>
-        <div className="my-2">
+        <div className="my-4">
           {questions[currentQuestion]?.options.map((option, index) => (
             <div
               key={index}
@@ -141,12 +141,12 @@ const Quiz = () => {
                 </p>
               </>
             )}
-            <Link to="/">
+            <Link to="/bootcamps/ethereum">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
                 onClick={handleCloseModal}
               >
-                Close
+                Done
               </button>
             </Link>
           </div>

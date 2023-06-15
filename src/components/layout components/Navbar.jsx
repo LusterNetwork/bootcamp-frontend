@@ -40,8 +40,11 @@ const Header = () => {
             </div>
             <div className="hidden md:block" >
                   <ul className="flex gap-8">
+                  {/* <li className="cursor-pointer hover:underline transition-all">
+                  <Link to="/tokentrivia" className="">Test your knowledge</Link>
+                  </li> */}
                   <li className="cursor-pointer hover:underline transition-all">
-                  <Link to="/tokentrivia" className="">Token Trivia</Link>
+                  <a href="#POE" className="">POE</a>
                   </li>
                     <li className="cursor-pointer hover:underline transition-all hover:underline-offset-4">
                       <Link to="/bootcamps/ethereum" className="">Bootcamp</Link>
