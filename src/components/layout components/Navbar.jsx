@@ -44,7 +44,7 @@ const Header = () => {
                   <Link to="/tokentrivia" className="">Test your knowledge</Link>
                   </li> */}
                   <li className="cursor-pointer hover:underline transition-all">
-                  <a href="#POE" className="">POE</a>
+                  <Link to="/" onClick={() => setTimeout(() => window.location.href = "/#POE", 0)}>POE</Link>
                   </li>
                     <li className="cursor-pointer hover:underline transition-all hover:underline-offset-4">
                       <Link to="/bootcamps/ethereum" className="">Bootcamp</Link>
