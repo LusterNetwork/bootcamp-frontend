@@ -46,6 +46,10 @@ const Quiz = () => {
     }
   }, [selectedOption, currentQuestion]);
 
+  useEffect(() => {
+    setTimer(60); // Reset timer to 60 whenever currentQuestion changes
+  }, [currentQuestion]);
+
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   };
@@ -68,17 +72,8 @@ const Quiz = () => {
   };
 
   return (
-    <div className="container mx-auto p-40">
-      <div className="flex justify-between items-center">
-        <div
-          className={`text-lg flex items-center ${
-            timer <= 10 ? "text-red-500" : ""
-          }`}
-        >
-          <RiTimerLine className="mr-1" />
-          <span>:&nbsp;{timer}s</span>
-        </div>
-        <div className="progress-bar flex-grow ml-4">
+    <>
+    <div className="progress-bar mt-[6.5%] fixed">
           <div
             className="progress-bar-fill"
             style={{
@@ -86,19 +81,23 @@ const Quiz = () => {
             }}
           ></div>
         </div>
+    <div className="container mx-auto px-40 py-40 ">
+      <div className="flex items-center justify-end">
+        <div className="text-xl flex items-center ml-4">
+          <RiTimerLine className="mr-1" />
+          <span>:&nbsp;{timer}s</span>
+        </div>
       </div>
       <div className="my-4">
         <h1 className="text-2xl font-bold">
-        {`Q.${currentQuestion+1}`} &nbsp; {questions[currentQuestion]?.question}
+          {`Q.${currentQuestion + 1}`} &nbsp; {questions[currentQuestion]?.question}
         </h1>
         <div className="my-4">
           {questions[currentQuestion]?.options.map((option, index) => (
             <div
               key={index}
               className={`p-2 mb-2 border rounded cursor-pointer ${
-                selectedOption === option
-                  ? "bg-white text-black font-semibold"
-                  : ""
+                selectedOption === option ? "bg-white text-black font-semibold" : ""
               }`}
               onClick={() => handleOptionSelect(option)}
             >
@@ -110,9 +109,7 @@ const Quiz = () => {
           className="bg-blue-500 mt-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={handleNextQuestion}
         >
-          {currentQuestion + 1 === questions.length
-            ? "Show Result"
-            : "Next Question"}
+          {currentQuestion + 1 === questions.length ? "Show Result" : "Next Question"}
         </button>
       </div>
 
@@ -127,18 +124,12 @@ const Quiz = () => {
               <>
                 <h2
                   className={`text-2xl font-bold mb-2 ${
-                    score >= questions.length / 2
-                      ? "text-green-500"
-                      : "text-red-500"
+                    score >= questions.length / 2 ? "text-green-500" : "text-red-500"
                   }`}
                 >
-                  {score >= questions.length / 2
-                    ? "Congratulations! 🎉✨🎉"
-                    : "Failed! ☹☹☹"}
+                  {score >= questions.length / 2 ? "Congratulations! 🎉✨🎉" : "Failed! ☹☹☹"}
                 </h2>
-                <p className="font-semibold text-black">
-                  Your score: {score}/{questions.length}
-                </p>
+                <p className="font-semibold text-black">Your score: {score}</p>
               </>
             )}
             <Link to="/bootcamps/ethereum">
@@ -153,6 +144,7 @@ const Quiz = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

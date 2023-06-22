@@ -26,7 +26,7 @@ const App = () => {
         <Routes>
         <Route path="/download/excel" element={<ExcelDownload />} />
           <Route path="/" element={<Home />} />
-          <Route path="/tokentrivia" element={<Quiz />} />
+          <Route path="/brainteaser" element={<Quiz />} />
           <Route path="/register" element={<Register />} />
           <Route path="/newbootcampregister" element={<NewBootCampRegister />} />
           <Route path="/aboutus" element={<AboutUS />} />

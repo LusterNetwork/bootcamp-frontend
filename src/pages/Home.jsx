@@ -121,7 +121,7 @@ const Home = () => {
       <section id="POE" className="md:p-12 flex justify-center items-center">
         <div
           className="box-content flex flex-col justify-center shadow-xl
-   bg-black rounded-md w-[70%]"
+   bg-black hover:border-2 border-white rounded-md w-[70%]"
         >
           <p
             className="text-white text-5xl mt-12 mx-5 md:text-2xl font-bold"
@@ -294,7 +294,7 @@ const Home = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col p-8 items-center bg-gradient-to-r from-indigo-900 to-blue-900 justify-center rounded-md mb-10">
+                <div className="flex flex-col p-8 items-center bg-black rounded-md mb-10">
                   <picture className="flex items-center justify-center">
                     <img
                       src={person.image}

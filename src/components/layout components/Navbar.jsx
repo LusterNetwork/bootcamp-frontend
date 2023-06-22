@@ -3,7 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import {CgProfile} from "react-icons/cg"
 import {MdOutlineSpaceDashboard, MdLogout, MdBusiness} from 'react-icons/md';
-import {AiFillCaretDown, AiOutlineUser, AiFillHome} from 'react-icons/ai'
+import {AiFillCaretDown, AiOutlineUser, AiFillHome} from 'react-icons/ai';
+import {FaBrain} from "react-icons/fa"
 import Timer from "./Timer";
 
 const Header = () => {
@@ -39,10 +40,14 @@ const Header = () => {
                 </div>
             </div>
             <div className="hidden md:block" >
-                  <ul className="flex gap-8">
-                  {/* <li className="cursor-pointer hover:underline transition-all">
-                  <Link to="/tokentrivia" className="">Test your knowledge</Link>
-                  </li> */}
+                  <ul className="flex items-center gap-8">
+                  <button class="p-2 transform transition duration-500 hover:scale-105 flex font-semibold border-transparent rounded-lg items-center bg-gradient-to-r from-blue-400 to-purple-600 justify-center hover:shadow-lg">
+  <Link to="/brainteaser" class="text-white flex items-center">
+   <FaBrain className="mr-2 text-2xl"/>
+    <p>Brain Teaser</p>
+  </Link>
+</button>
+
                   <li className="cursor-pointer hover:underline transition-all">
                   <Link to="/" onClick={() => setTimeout(() => window.location.href = "/#POE", 0)}>POE</Link>
                   </li>
