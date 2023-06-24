@@ -67,8 +67,7 @@ const Register = () => {
 
     setLoading(true);
     sendRequest();
-    setLoading(false);
-    history("/");
+    
   };
 
   const sendRequest=async()=>{
@@ -81,12 +80,16 @@ const Register = () => {
       bootcamp:user.bootcamp,
       coupon:user.coupon
     })
+    setLoading(false);
+    history("/");
+    
     } catch (error) {
       console.log(error)
       toast.error(`Error : ${error}`, {
         position: "bottom-center",
         autoClose: 5000,
       })
+    setLoading(false);
     }
   }
 
