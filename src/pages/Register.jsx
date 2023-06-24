@@ -78,7 +78,7 @@ const Register = () => {
       phoneNumber:user.phone_no,
       experience:user.experience,
       bootcamp:user.bootcamp,
-      coupon:user.coupon
+      couponCode:user.coupon
     })
     setLoading(false);
     history("/");
