@@ -41,12 +41,12 @@ const Header = () => {
             </div>
             <div className="hidden md:block" >
                   <ul className="flex items-center gap-8">
-                  <button class="p-2 transform transition duration-500 hover:scale-105 flex font-semibold border-transparent rounded-lg items-center bg-gradient-to-r from-blue-400 to-purple-600 justify-center hover:shadow-lg">
+                  {/* <button class="p-2 transform transition duration-500 hover:scale-105 flex font-semibold border-transparent rounded-lg items-center bg-gradient-to-r from-blue-400 to-purple-600 justify-center hover:shadow-lg">
   <Link to="/brainteaser" class="text-white flex items-center">
    <FaBrain className="mr-2 text-2xl"/>
     <p>Brain Teaser</p>
   </Link>
-</button>
+</button> */}
 
                   <li className="cursor-pointer hover:underline transition-all">
                   <Link to="/" onClick={() => setTimeout(() => window.location.href = "/#POE", 0)}>POE</Link>
