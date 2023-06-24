@@ -16,6 +16,7 @@ import NewBootCamp from "./pages/bootcamps/NewBootcamp";
 import ExcelDownload from "./pages/ExcelDownload";
 import NewBootCampRegister from "./pages/NewBootCampRegister";
 import Paytm from "./pages/Paytm";
+import Quiz from "./pages/Quiz/Quiz";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
         <Route path="/download/excel" element={<ExcelDownload />} />
           <Route path="/" element={<Home />} />
+          <Route path="/brainteaser" element={<Quiz />} />
           <Route path="/register" element={<Register />} />
           <Route path="/newbootcampregister" element={<NewBootCampRegister />} />
           <Route path="/aboutus" element={<AboutUS />} />

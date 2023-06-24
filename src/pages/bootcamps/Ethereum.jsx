@@ -3,11 +3,9 @@ import { EthereumCurriculum } from '../../components/bootcamp components'
 import { Link } from 'react-router-dom'
 import {AiOutlineLinkedin} from "react-icons/ai"
 import { BsLinkedin, BsPlusLg } from 'react-icons/bs'
-
 import { TeamInfo } from '../../components/page components'
 import { reviews } from '../../constants'
 import { faqs } from '../../constants'
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -123,58 +121,154 @@ const Ethereum = () => {
 
         </section>
 
-        {/* champions section */}
         <section className='px-8 pt-24 md:px-24 text-center'>
 
         <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-5 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md'>
             <p className='px-2 md:px-24 md:text-center text-left my-7 text-3xl leading-8'>You can be in top 0.1% Web3 Developers!</p>    
             <p className='px-2 md:px-24 md:text-center text-left my-7 text-3xl leading-8'>Whether you are a working professional or a student</p>
         </div>
-
-        <p className='text-5xl md:text-5xl mt-24 font-semibold'>Our Champions</p>
-        <div className='grid grid-cols-1 md:grid-cols-3 py-16 gap-8'>   
-
-            <div className='col-span-1 flex flex-col items-center place-self-center'>
-                <img src='/assets/bristin.jpg' width={200} height={200} alt="bristin" className='rounded-full w-[60%] mb-6' />
-                <p className='text-3xl flex items-center justify-center'>
-                    Bristin Borah
-                    <Link href='https://www.linkedin.com/in/bristin-borah-739b63179' target="_blank">
-                        <AiOutlineLinkedin className='mt-1 hover:cursor-pointer ml-2' />
-                    </Link>
-                </p>
-                <p className='text-xl mb-3'>(Blockchain Engineer)</p>
-                <p className='text-xl'>Company: Melisoft</p>
-                <p className='text-xl font-bold'>CTC: 30LPA</p>
-            </div>
-
-            <div className='col-span-1 flex flex-col items-center place-self-center'>
-                <img src='/assets/akash.jpeg' width={200} height={200} alt="akash" className='rounded-full w-[60%] mb-6' />
-                <p className='text-3xl flex items-center justify-center'>
-                    Akash Singh
-                    <Link href='https://www.linkedin.com/in/akash-singh-071850193/' target="_blank">
-                        <AiOutlineLinkedin className='mt-1 hover:cursor-pointer ml-2' />
-                    </Link>
-                </p>
-                <p className='text-xl mb-3'>(Blockchain Engineer Intern)</p>
-                <p className='text-xl'>Company: Impactional Games</p>
-                <p className='text-xl font-bold'>Stipend: 12K</p>
-            </div>
-
-            <div className='col-span-1 flex flex-col items-center place-self-center'>
-                <img src='/assets/tathagat.jpeg' width={200} height={200} alt="tathagat" className='rounded-full w-[60%] mb-6' />
-                <p className='text-3xl flex items-center justify-center'>
-                    Tathagat
-                    <Link href='https://www.linkedin.com/in/tathagat-926779191/' target="_blank">
-                        <AiOutlineLinkedin className='mt-1 hover:cursor-pointer ml-2' />
-                    </Link>
-                </p>
-                <p className='text-xl mb-3'>(Blockchain Engineer Intern)</p>
-                <p className='text-xl'>Company: Impactional Games</p>
-                <p className='text-xl font-bold'>Stipend: 12K</p>
-            </div>
-
-        </div>
         </section>
+
+        {/* champions section */}
+        <section className='px-8 md:px-8 text-center'>
+        <div>
+      <p className="text-5xl md:text-5xl mt-24 mb-12 font-semibold">Our Champions</p>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={0}
+        pagination={{ clickable: true }}
+        modules={[Navigation, Pagination, Autoplay]}
+        autoplay={true}
+        navigation={true}
+      >
+        <SwiperSlide>
+          <div className="flex flex-col items-center place-self-center">
+            <img
+              src="/assets/bristin.jpg"
+              width={200}
+              height={200}
+              alt="bristin"
+              className="rounded-full w-[60%] mb-6"
+            />
+            <p className="text-3xl flex items-center justify-center">
+              Bristin Borah
+              <Link href="https://www.linkedin.com/in/bristin-borah-739b63179" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              </Link>
+            </p>
+            <p className="text-xl mb-3">(Blockchain Engineer)</p>
+            <p className="text-xl">Company: Melisoft</p>
+            <p className="text-xl font-bold">CTC: 30LPA</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="flex flex-col items-center place-self-center">
+            <img
+              src="/assets/akash.jpeg"
+              width={200}
+              height={200}
+              alt="akash"
+              className="rounded-full w-[60%] mb-6"
+            />
+            <p className="text-3xl flex items-center justify-center">
+              Akash Singh
+              <Link href="https://www.linkedin.com/in/akash-singh-071850193/" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              </Link>
+            </p>
+            <p className="text-xl mb-3">(Blockchain Dev)</p>
+            <p className="text-xl">Company: Impactional Games</p>
+            <p className="text-xl font-bold">Stipend: 12K</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="flex flex-col items-center place-self-center">
+            <img
+              src="/assets/tathagat.jpeg"
+              width={200}
+              height={200}
+              alt="tathagat"
+              className="rounded-full w-[60%] mb-6"
+            />
+            <p className="text-3xl flex items-center justify-center">
+              Tathagat
+              <Link href="https://www.linkedin.com/in/tathagat-926779191/" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              </Link>
+            </p>
+            <p className="text-xl mb-3">(Blockchain Engineer Intern)</p>
+            <p className="text-xl">Company: Impactional Games</p>
+            <p className="text-xl font-bold">Stipend: 12K</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="flex flex-col items-center place-self-center">
+            <img
+              src="/assets/tathagat.jpeg"
+              width={200}
+              height={200}
+              alt="tathagat"
+              className="rounded-full w-[60%] mb-6"
+            />
+            <p className="text-3xl flex items-center justify-center">
+            Vignesh Raja
+              <Link href="" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              </Link>
+            </p>
+            <p className="text-xl mb-3">(Blockchain Dev)</p>
+            <p className="text-xl">Company: Puffles</p>
+            <p className="text-xl font-bold">CTC:12 LPA</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="flex flex-col items-center place-self-center">
+            <img
+              src="/assets/tathagat.jpeg"
+              width={200}
+              height={200}
+              alt="tathagat"
+              className="rounded-full w-[60%] mb-6"
+            />
+            <p className="text-3xl flex items-center justify-center">
+           Shubham Garg
+              <Link href="" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              </Link>
+            </p>
+            <p className="text-xl mb-3">(Blockchain Dev)</p>
+            <p className="text-xl">Company: V3</p>
+            <p className="text-xl font-bold">Stipend: 20K</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="flex flex-col items-center place-self-center mb-12">
+            <img
+              src="/assets/tathagat.jpeg"
+              width={200}
+              height={200}
+              alt="tathagat"
+              className="rounded-full w-[60%] mb-6"
+            />
+            <p className="text-3xl flex items-center justify-center">
+              Abhijeet Ranjan
+              <Link href="" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              </Link>
+            </p>
+            <p className="text-xl mb-3">(Blockchain Dev)</p>
+            <p className="text-xl">Company: Rooba FInance</p>
+            <p className="text-xl font-bold">CTC: 6 LPA</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+    </section>
 
         {/* additional info section */}
         <section>
@@ -248,7 +342,7 @@ const Ethereum = () => {
                 >
                     {reviews.map((person,i) => (
                         <SwiperSlide key={i}>
-                            <div className='flex flex-col p-8 items-center bg-gradient-to-r from-indigo-900 to-blue-900 justify-center rounded-md mb-10'>
+                            <div className='flex flex-col p-8 items-center bg-black justify-center rounded-md mb-10'>
                                 <picture className='flex items-center justify-center'>
                                 <img
                                     src={person.image}
@@ -279,7 +373,7 @@ const Ethereum = () => {
                 >
                     {reviews.map((person,i) => (
                         <SwiperSlide key={person.name}>
-                            <div className='flex h-[30rem] flex-col p-8 items-center w-[28rem] bg-gradient-to-r from-indigo-900 to-blue-900 shadow-md rounded-3xl justify-center m-20 mx-auto'>
+                            <div className='flex h-[30rem] flex-col p-8 items-center w-[28rem] bg-black shadow-md rounded-3xl justify-center m-20 mx-auto'>
                                 <picture>
                                 <img
                                     src={person.image}
@@ -347,6 +441,21 @@ const Ethereum = () => {
                 <img src='/assets/ethereum.png' height={90} width={90}/>
                 <h1 className='font-semibold text-3xl text-blue-400'>Ethereum</h1>
             </article>
+             {/* new partners */}
+          <article className="flex gap-4 items-center">
+            <img src="/assets/code8.jpeg" height={90} width={90} />
+            <h1 className="font-semibold text-3xl text-blue-400">Code8</h1>
+          </article>
+          <article className="flex gap-4 items-center">
+            <img src="/assets/Mentorle.jpeg" height={90} width={90} />
+            <h1 className="font-semibold text-3xl text-white">Mentorle</h1>
+          </article>
+          <article className="flex gap-4 items-center">
+            <img src="/assets/bananasdk.jpeg" height={90} width={90} />
+            <h1 className="font-semibold text-3xl text-yellow-300">
+              Banana SDK
+            </h1>
+          </article>
             </section>
         </section>
 

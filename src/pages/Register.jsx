@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Registeration_Modal from "./Registeration_Modal";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -15,12 +16,13 @@ const Register = () => {
   });
   const [loading, setLoading] = useState(false);
   const[isOpen,setIsOpen] = useState(false);
+  const history = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Regular expressions for email and phone number format
     const emailRegex = /^\S+@\S+\.\S+$/;
-    const phoneRegex = /^\d{10}$/;
+    const phoneRegex = /^(\+?\d{1,3}[-. ]?)?\d{10}$/;
     // Object to store error messages
     const errors = {};
 
@@ -65,24 +67,29 @@ const Register = () => {
 
     setLoading(true);
     sendRequest();
+    
   };
 
   const sendRequest=async()=>{
     try {
-      const res= await axios.post("http://localhost:5003/",{
+      const res= await axios.post("https://mainsite-backend.onrender.com/",{
       name:user.name,
       email:user.email,
       phoneNumber:user.phone_no,
       experience:user.experience,
       bootcamp:user.bootcamp,
-      coupon:user.coupon
+      couponCode:user.coupon
     })
+    setLoading(false);
+    history("/");
+    
     } catch (error) {
       console.log(error)
       toast.error(`Error : ${error}`, {
         position: "bottom-center",
         autoClose: 5000,
       })
+    setLoading(false);
     }
   }
 
@@ -126,7 +133,7 @@ const Register = () => {
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">Phone Number*</p>
                   <input
-                    placeholder="+911234567890"
+                    placeholder="Enter your phone number "
                     onChange={(e) =>
                       setUser({ ...user, phone_no: e.target.value })
                     }
