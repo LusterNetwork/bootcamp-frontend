@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Registeration_Modal from "./Registeration_Modal";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [user, setUser] = useState({
@@ -15,6 +16,7 @@ const Register = () => {
   });
   const [loading, setLoading] = useState(false);
   const[isOpen,setIsOpen] = useState(false);
+  const history = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -65,11 +67,13 @@ const Register = () => {
 
     setLoading(true);
     sendRequest();
+    setLoading(false);
+    history("/");
   };
 
   const sendRequest=async()=>{
     try {
-      const res= await axios.post("http://localhost:5003/",{
+      const res= await axios.post("https://mainsite-backend.onrender.com/",{
       name:user.name,
       email:user.email,
       phoneNumber:user.phone_no,
