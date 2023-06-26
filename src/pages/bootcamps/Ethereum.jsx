@@ -207,7 +207,7 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center">
             <img
-              src="/src/assets/VigneshRajaImage.png"
+              src="https://res.cloudinary.com/dtblj84n0/image/upload/v1687760763/luster%20mainsite/VigneshRajaImage_ycmbt6.png"
               width={200}
               height={200}
               alt="tathagat"
@@ -249,16 +249,16 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center mb-12">
             <img
-              src="/src/assets/AbhijeetRanjanImage.jpg"
+              src="https://res-console.cloudinary.com/dtblj84n0/thumbnails/v1/image/upload/v1687760763/bHVzdGVyIG1haW5zaXRlL0FiaGlqZWV0UmFuamFuSW1hZ2VfcXh6Y3Fm/as_is"
               width={200}
               height={200}
-              alt="tathagat"
+              alt="Abijeet Ranjan"
               className="rounded-full w-[60%] mb-6"
             />
             <p className="text-3xl flex items-center justify-center">
               Abhijeet Ranjan
-              <Link href="" target="_blank">
-                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              <Link href="https://www.linkedin.com/in/bytecodevelocity/" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" href='https://www.linkedin.com/in/bytecodevelocity/' />
               </Link>
             </p>
             <p className="text-xl mb-3">(Blockchain Dev)</p>
