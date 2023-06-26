@@ -207,7 +207,7 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center">
             <img
-              src="/assets/tathagat.jpeg"
+              src="/src/assets/VigneshRajaImage.png"
               width={200}
               height={200}
               alt="tathagat"
@@ -228,15 +228,15 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center">
             <img
-              src="/assets/tathagat.jpeg"
+              src="https://drive.google.com/uc?id=124InUJ6mYyVgKcD4mTqWUOP4PtzB116P"
               width={200}
               height={200}
-              alt="tathagat"
+              alt="Shubham Garg"
               className="rounded-full w-[60%] mb-6"
             />
             <p className="text-3xl flex items-center justify-center">
            Shubham Garg
-              <Link href="" target="_blank">
+              <Link href="https://www.linkedin.com/in/shubham-garg-6232181b8/" target="_blank">
                 <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
               </Link>
             </p>
@@ -249,7 +249,7 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center mb-12">
             <img
-              src="/assets/tathagat.jpeg"
+              src="/src/assets/AbhijeetRanjanImage.jpg"
               width={200}
               height={200}
               alt="tathagat"
