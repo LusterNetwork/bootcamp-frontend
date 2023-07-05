@@ -80,7 +80,7 @@ const Home = () => {
   return (
     <main className="">
       {/* hero section */}
-      <div className="grid grid-cols-1 md:grid-cols-2  mx-auto items-center md:py-32 py-6 my-9 gap-5 min-h-[100vh] w-[75%]  md:p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2  mx-auto items-center md:pt-32 py-6 my-9 gap-5 min-h-[100vh] w-[75%]  md:p-4">
         <div className="col-span-1 mt-12 place-self-center md:w-[80%]">
           <p className="text-5xl md:text-7xl font-semibold">Learn Web3,</p>
           <p className="text-5xl md:text-7xl font-semibold">Get Certified,</p>
@@ -118,13 +118,13 @@ const Home = () => {
       </div>
       {/* POE section */}
 
-      <section id="POE" className="md:p-12 flex justify-center items-center">
+      <section id="POE" className="p-4 md:p-12 flex justify-center items-center">
         <div
           className="box-content flex flex-col justify-center shadow-xl
-   bg-black hover:border-2 border-white rounded-md w-[70%]"
+   bg-black hover:border-2 border-white rounded-md md:w-[70%] lg:w-[70%] xl:w-[70%] sm:w-[100%] "
         >
           <p
-            className="text-white text-5xl mt-12 mx-5 md:text-2xl font-bold"
+            className="text-white text-xl mt-12 mx-5 md:text-2xl font-bold"
             style={{ lineHeight: "3rem" }}
           >
             <ul className="list-disc ml-10">
