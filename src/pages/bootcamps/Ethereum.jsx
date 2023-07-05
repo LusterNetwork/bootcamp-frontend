@@ -207,7 +207,7 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center">
             <img
-              src="/assets/tathagat.jpeg"
+              src="https://res.cloudinary.com/dtblj84n0/image/upload/v1687760763/luster%20mainsite/VigneshRajaImage_ycmbt6.png"
               width={200}
               height={200}
               alt="tathagat"
@@ -228,15 +228,15 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center">
             <img
-              src="/assets/tathagat.jpeg"
+              src="https://drive.google.com/uc?id=124InUJ6mYyVgKcD4mTqWUOP4PtzB116P"
               width={200}
               height={200}
-              alt="tathagat"
+              alt="Shubham Garg"
               className="rounded-full w-[60%] mb-6"
             />
             <p className="text-3xl flex items-center justify-center">
            Shubham Garg
-              <Link href="" target="_blank">
+              <Link href="https://www.linkedin.com/in/shubham-garg-6232181b8/" target="_blank">
                 <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
               </Link>
             </p>
@@ -249,16 +249,16 @@ const Ethereum = () => {
         <SwiperSlide>
           <div className="flex flex-col items-center place-self-center mb-12">
             <img
-              src="/assets/tathagat.jpeg"
+              src="https://res.cloudinary.com/dtblj84n0/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1687764283/AbhijeetRanjanImage_zk0qa7.jpg?_s=public-apps"
               width={200}
               height={200}
-              alt="tathagat"
+              alt="Abijeet Ranjan"
               className="rounded-full w-[60%] mb-6"
             />
             <p className="text-3xl flex items-center justify-center">
               Abhijeet Ranjan
-              <Link href="" target="_blank">
-                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
+              <Link href="https://www.linkedin.com/in/bytecodevelocity/" target="_blank">
+                <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2"/>
               </Link>
             </p>
             <p className="text-xl mb-3">(Blockchain Dev)</p>
