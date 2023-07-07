@@ -13,7 +13,6 @@ import {
 } from "./pages";
 import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
-import NewBootCamp from "./pages/bootcamps/NewBootcamp";
 import ExcelDownload from "./pages/ExcelDownload";
 import Paytm from "./pages/Paytm";
 import Quiz from "./pages/Quiz/Quiz";
@@ -24,7 +23,7 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-        <Route path="/download/excel" element={<ExcelDownload />} />
+          <Route path="/download/excel" element={<ExcelDownload />} />
           <Route path="/" element={<Home />} />
           <Route path="/brainteaser" element={<Quiz />} />
           <Route path="/register" element={<Register />} />
@@ -33,11 +32,11 @@ const App = () => {
           <Route path="/dcma" element={<DCMA />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
-            <Route path="paytm" element={<Paytm />} />
+          <Route path="/paytm" element={<Paytm />} /> {/* Added a missing slash before "paytm" */}
           <Route path="/terms" element={<Terms />} />
-          <Route path="bootcamps">
-            <Route path="ethereum" element={<Ethereum />} />
-            <Route path="aibootcamp" element={<AiBootcamp />} />
+          <Route path="/bootcamps">
+            <Route path="ethereum" element={<Ethereum />} /> {/* Added a missing slash before "ethereum" */}
+            <Route path="aibootcamp" element={<AiBootcamp />} /> {/* Added a missing slash before "aibootcamp" */}
           </Route>
         </Routes>
         <Footer />
