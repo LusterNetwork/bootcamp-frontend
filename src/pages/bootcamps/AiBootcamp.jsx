@@ -187,7 +187,7 @@ const AiBootcamp = () => {
 
         <div className="graph-image mt-8 md: mr-8 md:mt-0">
           <img
-            src="/src/assets/AI_software.webp"
+            src="/assets/AI_software.webp"
             alt="graph"
             className="h-[22rem] w-[23rem]"
           />
