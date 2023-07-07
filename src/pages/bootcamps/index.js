@@ -1,7 +1,7 @@
 import Ethereum from "./Ethereum";
-import AiBootcamp from "./aIBootcamp";
+import AiBootcamp from "./AiBootcamp";
 
 export {
     Ethereum,
-    AiBootcamp
+    AiBootcamp,
 }
