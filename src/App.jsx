@@ -28,7 +28,6 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/brainteaser" element={<Quiz />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/newbootcampregister" element={<NewBootCampRegister />} />
           <Route path="/aboutus" element={<AboutUS />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/dcma" element={<DCMA />} />
@@ -38,7 +37,7 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="bootcamps">
             <Route path="ethereum" element={<Ethereum />} />
-            <Route path="aibootcamp" element={<AiBootCamp />} />
+            <Route path="aibootcamp" element={<AiBootcamp />} />
           </Route>
         </Routes>
         <Footer />
