@@ -180,6 +180,7 @@ const Register = () => {
                   >
                     <option value="Select bootcamp">Select bootcamp</option>
                     <option value="Ethereum">Ethereum</option>
+                    <option value="AI">Artificial Intelligence</option>
                   </select>
                 </div>
 

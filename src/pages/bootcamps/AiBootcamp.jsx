@@ -58,34 +58,34 @@ const AiBootcamp = () => {
     <main className="md:w-[90%] mx-auto">
       {/*Landing section*/}
       <section className="px-8">
-      <div className="pt-52 min-h-[95vh] flex flex-col items-center justify-center">
+      <div className="pt-36 min-h-[95vh] flex flex-col items-center justify-center">
   <div className="flex flex-col mb-4 md:mb-0 md:flex-row">
     <p className="text-[#006DF6] m-0 text-[55px] text-center font-bold">
-      <span className="text-neutral-100 m-0">Artificial Intelligence</span>
+      <span className="text-7xl text-neutral-100 m-0 font-vt323 tracking-wide">Artificial Intelligence</span>
     </p>
   </div>
   <div>
-    <p className="text-5xl md:text-[60px] m-0 md:mb-6 font-bold">Bootcamp </p>
+    <p className="text-7xl m-0 md:mb-6 font-bold font-vt323 tracking-wider">Bootcamp </p>
   </div>
   <div className="container">
-    <div className="mt-10 bg-gradient-to-r from-purple-500 to-blue-500 text-white py-12 px-8 rounded-lg shadow-lg">
+    <div className="mt-10 bg-gradient-to-bl from-gray-700 via-gray-900 to-black text-white py-12 px-8 rounded-lg shadow-lg">
       <h1 className="text-4xl md:text-4xl font-bold text-center mb-8 font-bruno tracking-wider">
         Become an Entry-Level AI/ML Developer within 1 Month
       </h1>
       <div className="flex flex-col space-y-4">
-        <p className="text-lg md:text-xl text-center">
+        <p className="text-lg md:text-xl text-center font-orbitron">
           Learn ChatGPT, Chatbot Development, NLP, Computer Vision, and more
         </p>
-        <p className="text-lg md:text-xl text-center">
+        <p className="text-lg md:text-xl text-center font-orbitron">
           from an expert with personalized career guidance.
         </p>
       </div>
       <div className="flex flex-col space-y-4 mt-8">
-        <p className="text-lg md:text-xl text-center">Be ready for the</p>
-        <p className="text-2xl md:text-3xl font-bold text-center">
+        <p className="text-lg md:text-xl text-center font-orbitron">Be ready for the</p>
+        <p className="text-2xl md:text-3xl font-bold text-center font-orbitron">
           $15.7 Trillion Artificial Intelligence Global Market
         </p>
-        <p className="text-2xl md:text-3xl font-bold text-center">
+        <p className="text-2xl md:text-3xl font-bold text-center font-orbitron">
           and 97 Million Jobs by 2030
         </p>
       </div>
@@ -94,7 +94,7 @@ const AiBootcamp = () => {
   <div className="button md:mt-8 mt-4">
     <a
       href={"/register"}
-      className="h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
+      className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
     >
       <button>Register now!</button>
     </a>
@@ -107,12 +107,12 @@ const AiBootcamp = () => {
         </div>
 
         <div className="flex flex-col border-3 items-center text-center justify-center md:my-16 py-12">
-          <p className="font-bold text-5xl">Connect for free consultation</p>
-          <p className="text-2xl my-8">Schedule online meet now!</p>
+          <p className="font-bold text-5xl font-bruno">Connect for free consultation</p>
+          <p className="text-2xl my-8 font-orbitron">Schedule online meet now!</p>
           <a
             href="https://calendly.com/lusternetwork/pradnyashil"
             target="_blank"
-            className="h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center "
+            className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center "
           >
             Schedule now !
           </a>
@@ -122,7 +122,7 @@ const AiBootcamp = () => {
       {/* graph section */}
       <section className="flex flex-col items-center md:flex-row md:justify-between md:flex-wrap px-8 py-8">
         <div className="text-left md:w-[65%]">
-          <div className="text-4xl md:text-6xl text-white font-semibold md:w-[75%]">
+          <div className="text-4xl md:text-6xl text-white font-semibold md:w-[75%] font-bruno">
             <p>
               <span className="">Become a</span>
               <span className=""> AI Developer</span>
@@ -131,7 +131,7 @@ const AiBootcamp = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap my-12">
+          <div className="flex flex-wrap my-12 font-orbitron">
             <div
               className={`border rounded-md my-1 px-3 py-1 text-[16px] mx-3`}
             >
@@ -178,7 +178,7 @@ const AiBootcamp = () => {
           <div className="button mt-4">
             <a
               href="/register"
-              className="h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
+              className="font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               <button>Register now !</button>
             </a>
@@ -187,7 +187,7 @@ const AiBootcamp = () => {
 
         <div className="graph-image mt-8 md: mr-8 md:mt-0">
           <img
-            src="\src\assets\AI_software.webp"
+            src="/src/assets/AI_software.webp"
             alt="graph"
             className="h-[22rem] w-[23rem]"
           />
@@ -195,7 +195,7 @@ const AiBootcamp = () => {
       </section>
 
       <section className="px-8 pt-24 md:px-24 text-center">
-        <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-5 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md">
+        <div className="font-orbitron bg-gradient-to-r from-purple-500 to-blue-500 p-5 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md">
           <p className="px-2 md:px-24 md:text-center text-left my-7 text-3xl leading-8">
             You can be in top 0.1% AI Developers!
           </p>
@@ -375,16 +375,16 @@ const AiBootcamp = () => {
           </div>
 
           <div className="col-span-1 place-self-center">
-            <span className="text-3xl md:text-5xl font-semibold">
+            <span className="text-3xl md:text-5xl font-semibold font-bruno">
               Thinking about switching career?
             </span>
-            <p className="text-2xl md:text-2xl mt-3">Pick AI development!</p>
-            <p className="text-xl md:text-3xl my-8 md:my-12">
+            <p className="text-2xl md:text-2xl mt-4 font-orbitron">Pick AI development!</p>
+            <p className="text-xl md:text-3xl my-8 md:my-12 font-orbitron">
               What is holding you back?
             </p>
             <Link
               to="/register"
-              className="h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
+              className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               Register now!
             </Link>
@@ -398,12 +398,12 @@ const AiBootcamp = () => {
             className="hidden md:block absolute left-4 h-[10rem] w-[10rem]"
           />
           <div className="text-center flex flex-col items-center justify-center md:px-16 z-10">
-            <p className="text-2xl mb-6 md:5b-0 md:text-5xl">
-              <span className="hr2">Third batch for</span>{" "}
+            <p className="text-2xl mb-6 md:5b-0 md:text-5xl font-bruno">
+              <span className="hr2">Batch for</span>{" "}
               <span className="hr3">AI</span>{" "}
               <span className="hr2">Enthusiasts</span>
             </p>
-            <p className="text-2xl md:text-3xl md:w-[70%] text-center">
+            <p className="text-2xl md:text-2xl md:w-[70%] text-center font-orbitron">
               A project orientated program for working professionals and
               students on weekends{" "}
             </p>
@@ -418,12 +418,12 @@ const AiBootcamp = () => {
 
       {/* mentor section */}
       <section className="flex flex-col text-center min-h-[90vh] mb-16">
-        <span className=" m-auto w-full text-3xl md:text-5xl">
+        <span className=" m-auto w-full text-3xl md:text-5xl font-bruno">
           Meet Your Backbone
         </span>
 
         <div className="flex flex-col w-full justify-center">
-          <div className="w-[100%] mt-6 mb-16">
+          <div className="w-[100%] mt-6 mb-16 font-orbitron">
             <button
               className={`${
                 content === "Educator" ? `${clickButton}` : `${unclickedButton}`
@@ -456,7 +456,7 @@ const AiBootcamp = () => {
             </button>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center md:gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center md:gap-4 font-orbitron">
             <div className="flex flex-col col-span-1 mb-12 md:mb-0 md:mr-16 place-self-center items-center">
               <img
                 src={source}
@@ -480,7 +480,7 @@ const AiBootcamp = () => {
 
       {/* testimonial section */}
       <section className="px-8 md:px-16">
-        <p className=" pt-12 text-5xl font-semibold text-white items-center text-center my-6">
+        <p className=" pt-12 text-5xl font-semibold text-white items-center text-center my-6 font-bruno">
           Reviews
         </p>
         <div className="block md:hidden w-[95%] mx-auto">
@@ -495,7 +495,7 @@ const AiBootcamp = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col p-8 items-center bg-black justify-center rounded-md mb-10">
+                <div className="font-orbitron flex flex-col p-8 items-center bg-black justify-center rounded-md mb-10">
                   <picture className="flex items-center justify-center">
                     <img
                       src={person.image}
@@ -512,7 +512,7 @@ const AiBootcamp = () => {
           </Swiper>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block font-orbitron">
           <Swiper
             slidesPerView={2}
             spaceBetween={0}
@@ -544,16 +544,16 @@ const AiBootcamp = () => {
 
       {/* fees section */}
       <section className="flex flex-col py-12 md:mt-12 text-center min-h-[94vh] justify-center items-center">
-        <p className="text-7xl">Fees Structure</p>
+        <p className="text-7xl font-bruno">Fees Structure</p>
 
         <div className="flex flex-wrap justify-between mt-16 items-center px-[10%]">
           <div className="flex flex-col items-center">
             <div className="flex flex-col gap-12 my-15 items-center justify-center">
               <div className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
-                <div className="text-3xl md:text-7xl font-bold mb-1 ">
+                <div className="text-3xl md:text-7xl font-bold mb-1 font-orbitron">
                   ₹9,999 Only
                 </div>
-                <p className="text-[16px] md:text-[24px] mb-2 mt-8">
+                <p className="text-[16px] md:text-[24px] mb-2 mt-8 font-orbitron">
                   <b></b>For Bootcamp
                 </p>
                 {/* <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p> */}
@@ -562,7 +562,7 @@ const AiBootcamp = () => {
 
               <Link
                 to="/register"
-                className="h-[4rem] text-3xl transform duration-500 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center animate-bounce hover:animate-none hover:scale-125 transition-all"
+                className="font-orbitron h-[4rem] text-3xl transform duration-500 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center animate-bounce hover:animate-none hover:scale-125 transition-all"
               >
                 Register now!
               </Link>
@@ -577,20 +577,20 @@ const AiBootcamp = () => {
 
       {/* Why to learn now? */}
       <section class="flex flex-col items-center justify-center bg-gray-100 rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-        <h2 class="text-4xl font-bold mb-8 text-black">Why learn AI/ML now?</h2>
-        <div class="flex items-center  space-x-2 text-gray-600 mb-6">
-          <BsTwitter />
+        <h2 class="text-4xl font-bold mb-8 text-black font-bruno">Why learn AI/ML now?</h2>
+        <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
+          <BsTwitter/>
           <p>Elon Musk's Tweet about AI</p>
         </div>
-        <div class="flex items-center space-x-2 text-gray-600 mb-6">
-          <BsNewspaper />
+        <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
+          <BsNewspaper  />
           <p>Multiple Newspaper/Tweets attached</p>
         </div>
-        <p class="text-gray-700 mb-6">
+        <p class="text-gray-900 mb-6 text-lg font-medium font-orbitron">
           If you think that this is not the right time, you will lose your
           competitive edge in the fast-growing AI/ML world
         </p>
-        <p class="text-gray-700">
+        <p class="text-gray-900 text-lg font-medium font-orbitron">
           By 2030, VCs will be investing $154 billion in AI startups globally to
           generate 97 million jobs
         </p>
@@ -600,32 +600,33 @@ const AiBootcamp = () => {
       </section>
 
       {/* Outcome */}
-      <section class="mt-12 flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-  <h2 class="text-4xl font-bold text-white mb-8">Outcomes:</h2>
+      <section class="mt-12 flex flex-col items-center justify-center 
+      bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
+  <h2 class="text-4xl font-bold text-white mb-8 font-bruno">Outcomes</h2>
 
-  <div class="flex items-center space-x-4 text-white mb-6">
+  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
     <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
       <path d="M2 5a1 1 0 011-1h14a1 1 0 010 2H3a1 1 0 01-1-1zm1 4a1 1 0 100 2h14a1 1 0 100-2H3zm1 4a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm16-6a1 1 0 000-2H5a1 1 0 000 2h14z"></path>
     </svg>
     <p class="text-lg font-medium">Get Certificate on Completion</p>
   </div>
 
-  <div class="flex items-center space-x-4 text-white mb-6">
+  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
     <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M9 3a1 1 0 00-.707.293L6 5.586 7.414 7l1.293-1.293A1 1 0 009 5V3zm7 2h-1.172l-2.5 5H16a1 1 0 001-1V5zm-2.55 12.95a1 1 0 01-1.045-.45l-2-3a1 1 0 01.195-1.39A1 1 0 0110 13h4.58l1.464 2.197a1 1 0 01-.195 1.39l-2 1a1 1 0 01-.514.14zm-3.452-4.798l-2 5a1 1 0 01-1.85-.832l2-5a1 1 0 111.85.832zm-1.383 3.457l1.5-3.75 1.5 3.75h-3zm-6.615 3.32a1 1 0 11-.33-1.936l4-1a1 1 0 11.66 1.872l-4 1z" clip-rule="evenodd"></path>
     </svg>
     <p class="text-lg font-medium">Job/Internship opportunities</p>
   </div>
 
-  <div class="flex items-center space-x-4 text-white mb-6">
+  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
     <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M2 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM3 9a1 1 0 100 2h14a1 1 0 100-2H3zm1 4a1 1 0 011-1h10a1 1 0 010 2H5a1 1 0 01-1-1zm12-6a1 1 0 011-1h1v11a2 2 0 01-2 2H3a2 2 0 01-2-2V6h1a1 1 0 110 2H1v9a4 4 0 004 4h12a4 4 0 004-4V9h-1a1 1 0 110-2h1zm-2-2H3a1 1 0 110-2h12a1 1 0 110 2z" clip-rule="evenodd"></path>
     </svg>
     <p class="text-lg font-medium">Career Guidance in the AI World</p>
   </div>
 
-  <div class="flex items-center space-x-4 text-white mb-10">
-    <svg class="w-8 h-8 mr-2 text-white" fill="currentColor" viewBox="0 0 20 20">
+  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
+    <svg class="w-8 h-8  text-white" fill="currentColor" viewBox="0 0 20 20">
       <path fill-rule="evenodd" d="M4 8a1 1 0 01-1-1V4a1 1 0 112 0v3a1 1 0 01-1 1zm12-1a1 1 0 00-1-1V4a1 1 0 00-2 0v3a1 1 0 01-1 1H9a1 1 0 01-1-1V4a1 1 0 00-2 0v3a3 3 0 003 3h4a3 3 0 003-3V4a1 1 0 00-2 0v3zm-1 3H9a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
     </svg>
     <p class="text-lg font-medium">4 Real-World AI Projects</p>
@@ -635,10 +636,6 @@ const AiBootcamp = () => {
     Register Now
   </a>
 </section>
-
-
-
-
 
       {/* partners section */}
       <section className="flex flex-col items-center justify-center my-5 mt-[8rem]">
