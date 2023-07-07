@@ -4,8 +4,8 @@ import axios from "axios";
 import {CgProfile} from "react-icons/cg"
 import {MdOutlineSpaceDashboard, MdLogout, MdBusiness} from 'react-icons/md';
 import {AiFillCaretDown, AiOutlineUser, AiFillHome} from 'react-icons/ai';
-import {FaBrain} from "react-icons/fa"
-import Timer from "./Timer";
+import {FaBrain} from "react-icons/fa";
+import Timer from "../../pages/Timer.jsx";
 
 const Header = () => {
 
@@ -24,7 +24,7 @@ const Header = () => {
     <>
     <nav className='w-[100%] z-50 top-0 shadow-md bg-neutral-900 bg-opacity-70 backdrop-blur-xl fixed text-[20px]'>
     <div className="bg-slate-400">
-      {/* <Timer/> */}
+      <Timer/>
     </div>
       <div className="py-5 sm:px-5 flex flex-row items-center justify-between px-3 md:px-24 m-auto">
           <div onClick={gotohome} className="cursor-pointer flex items-center gap-2">

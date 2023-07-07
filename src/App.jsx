@@ -17,6 +17,7 @@ import ExcelDownload from "./pages/ExcelDownload";
 import NewBootCampRegister from "./pages/NewBootCampRegister";
 import Paytm from "./pages/Paytm";
 import Quiz from "./pages/Quiz/Quiz";
+import AiBootCamp from "./pages/bootcamps/aIBootcamp";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="bootcamps">
             <Route path="ethereum" element={<Ethereum />} />
             <Route path="newbootcamp" element={<NewBootCamp />} />
+            <Route path="aibootcamp" element={<AiBootCamp />} />
           </Route>
         </Routes>
         <Footer />
