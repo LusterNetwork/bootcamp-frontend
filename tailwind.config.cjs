@@ -16,6 +16,7 @@ module.exports = {
         vt323:['"VT323"', ...defaultTheme.fontFamily.sans],
         orbitron:['"Orbitron"', ...defaultTheme.fontFamily.sans],
         bruno:['"Bruno Ace SC"', ...defaultTheme.fontFamily.sans],
+        piazzolla:['"Piazzolla"', ...defaultTheme.fontFamily.sans],
       }
     },
   },

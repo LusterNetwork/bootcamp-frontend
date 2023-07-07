@@ -7,6 +7,7 @@ import { TeamInfo } from "../../components/page components";
 import { reviews } from "../../constants";
 import { faqs } from "../../constants";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Typed from "react-typed";
 
 // Import Swiper styles
 import "swiper/css";
@@ -59,13 +60,19 @@ const AiBootcamp = () => {
       {/*Landing section*/}
       <section className="px-8">
       <div className="pt-36 min-h-[95vh] flex flex-col items-center justify-center">
-  <div className="flex flex-col mb-4 md:mb-0 md:flex-row">
+  <div className="flex flex-col mb-4 md:my-10 md:flex-row">
     <p className="text-[#006DF6] m-0 text-[55px] text-center font-bold">
-      <span className="text-7xl text-neutral-100 m-0 font-vt323 tracking-wide">Artificial Intelligence</span>
+      <span className="text-7xl text-neutral-100 m-0 font-piazzolla tracking-wide">
+      <Typed
+          strings={[
+            "Artificial Intelligence Bootcamp",
+          ]}
+          typeSpeed={170}
+          backSpeed={100}
+          loop
+        />
+        </span>
     </p>
-  </div>
-  <div>
-    <p className="text-7xl m-0 md:mb-6 font-bold font-vt323 tracking-wider">Bootcamp </p>
   </div>
   <div className="container">
     <div className="mt-10 bg-gradient-to-bl from-gray-700 via-gray-900 to-black text-white py-12 px-8 rounded-lg shadow-lg">
