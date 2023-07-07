@@ -8,7 +8,7 @@ import Privacy from "./Privacy";
 import Terms from "./Terms";
 
 //pages importing for "/bootcamps"
-import { Ethereum } from "./bootcamps";
+import { Ethereum,AiBootcamp } from "./bootcamps";
 
 export {
     Home,
@@ -18,5 +18,6 @@ export {
     DCMA,
     Privacy,
     Terms,
-    Ethereum
+    Ethereum,
+    AiBootcamp
 }

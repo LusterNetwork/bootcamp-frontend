@@ -9,15 +9,14 @@ import {
   Privacy,
   Terms,
   Ethereum,
+  AiBootcamp
 } from "./pages";
 import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
 import NewBootCamp from "./pages/bootcamps/NewBootcamp";
 import ExcelDownload from "./pages/ExcelDownload";
-import NewBootCampRegister from "./pages/NewBootCampRegister";
 import Paytm from "./pages/Paytm";
 import Quiz from "./pages/Quiz/Quiz";
-import AiBootCamp from "./pages/bootcamps/aIBootcamp";
 
 const App = () => {
   return (
@@ -39,7 +38,6 @@ const App = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="bootcamps">
             <Route path="ethereum" element={<Ethereum />} />
-            <Route path="newbootcamp" element={<NewBootCamp />} />
             <Route path="aibootcamp" element={<AiBootCamp />} />
           </Route>
         </Routes>
