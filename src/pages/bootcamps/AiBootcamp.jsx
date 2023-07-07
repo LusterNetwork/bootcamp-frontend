@@ -594,7 +594,7 @@ const AiBootcamp = () => {
           By 2030, VCs will be investing $154 billion in AI startups globally to
           generate 97 million jobs
         </p>
-        <Link href="/register"
+        <Link to="/register"
   class="h-12 px-8 mt-8 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
   Register Now</Link>
       </section>
@@ -632,9 +632,9 @@ const AiBootcamp = () => {
     <p class="text-lg font-medium">4 Real-World AI Projects</p>
   </div>
 
-  <a href="/register" class="bg-white text-blue-500 hover:text-blue-600 text-lg font-semibold py-4 px-10 rounded-full transition-colors duration-300">
+  <Link to="/register" class="bg-white text-blue-500 hover:text-blue-600 text-lg font-semibold py-4 px-10 rounded-full transition-colors duration-300">
     Register Now
-  </a>
+  </Link>
 </section>
 
       {/* partners section */}
