@@ -8,7 +8,7 @@ const Header = () => {
   const navigate = useNavigate();
   const [color, setColor] = useState(false);
   const [active, setActive] = useState(false);
-
+  const[showOptions,setShowOptions]=useState(false);
   const gotohome = () => {
     navigate("/");
   };
@@ -33,22 +33,44 @@ const Header = () => {
             <Timer />
           </div>
           <div>
-            <div className={active ? "block" : "hidden"}>
-              <div className="absolute top-20 left-0 right-0 w-full px-2 rounded-b-md">
-                <ul className="bg-slate-900 flex flex-col items-center text-lg rounded-md transition-all">
-                  <li className="p-1 ">
-                    <Link to="/bootcamps/ethereum" className="">
-                      Bootcamp
-                    </Link>
-                  </li>
-                  <li className="p-1 cursor-pointer ">
-                    <Link href="/aboutus" className="">
-                      About us
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className={active ? "block" : "hidden"}>
+  <div className="absolute top-20 left-0 right-0 w-full px-2 rounded-b-md ">
+    <ul className="bg-slate-900 flex flex-col items-center text-center text-lg rounded-md transition-all ">
+      <li className="p-1">
+        <div className="flex flex-col items-center justify-between">
+          <Link to="/bootcamps/ethereum" className="ml-4 flex items-center" onClick={()=>setShowOptions(!showOptions)}>
+            Bootcamp
+            <RiArrowDropDownLine className="ml-1 mt-1.5" />
+          </Link>
+          <ul  className={`${showOptions ? "block" : "hidden"} text-center`}>
+            <li className="p-1">
+              <Link
+                to="/bootcamps/ethereum"
+                className="block px-4 py-2 hover:bg-black hover:text-white"
+              >
+              Ethereum
+              </Link>
+            </li>
+            <li className="p-1">
+              <Link
+                to="/bootcamps/aibootcamp"
+                className="block px-4 py-2 hover:bg-black hover:text-white"
+              >
+               Artificial Intelligence
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li className="p-1 cursor-pointer">
+        <Link href="/aboutus" className="">
+          About us
+        </Link>
+      </li>
+    </ul>
+  </div>
+</div>
+
             <div className="hidden md:block">
               {/* <button class="p-2 transform transition duration-500 hover:scale-105 flex font-semibold border-transparent rounded-lg items-center bg-gradient-to-r from-blue-400 to-purple-600 justify-center hover:shadow-lg">
   <Link to="/brainteaser" class="text-white flex items-center">

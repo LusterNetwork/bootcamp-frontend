@@ -95,18 +95,19 @@ const AiBootcamp = () => {
             </div>
           </div>
           <div className="button md:mt-8 mt-4">
-            <a
-              href={"/register"}
+            <Link
+              to={"/register"}
               className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               <button>Register now!</button>
-            </a>
+            </Link>
           </div>
         </div>
 
         <div id="Curriculum" className="">
           <AiCurriculum />
         </div>
+        
         <div className="px-8 md:px-28 text-center text-white py-12 flex flex-col items-center">
           <div className="rounded-full bg-white w-20 h-20 flex items-center justify-center mb-6">
             <BsPinFill className="text-purple-500 text-4xl" />
@@ -571,8 +572,8 @@ const AiBootcamp = () => {
                 <div className="text-3xl md:text-5xl font-bold mb-1 font-orbitron">
                   ₹9,999 Only for this batch
                 </div>
-                <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron line-through">
-                  ₹19,999 for others batch
+                <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron ">
+                <span className="line-through">₹19,999</span>  from next batch
                 </div>
                 {/* <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p> */}
                 {/* <p className='text-[16px] md:text-[24px] my-2'><b>Upfront fee:</b> ₹40,000</p> */}
@@ -670,8 +671,6 @@ const AiBootcamp = () => {
           Register Now
         </Link>
 </section>
-
-
 
       {/* partners section */}
       <section className="flex flex-col items-center justify-center my-5 mt-[5rem]">

@@ -9,11 +9,10 @@ const AiCurriculum = () => {
           title: "Natural language processing",
           week: "Week 1",
           desc: [
-            "Introduction to blockchain technology and its applications",
-            "Understanding consensus algorithms (Proof of Work, Proof of Stake)",
-            "Public vs. Private blockchains",
-            "Cryptography basics and the role it plays in blockchain security",
-            "Introduction to smart contracts and decentralized applications (dApps)"
+            "Introduction to Artificial Intelligence, Machine Learning, Deep Learning and Generative AI",
+            "Use cases of AI, its examples",
+            "Learn generative language models such as Chat GPT, Bard, etc.",
+            "Learn generative image models such as Midjourney, Jasper ai, etc",
           ],
           last_point: null,
         },
@@ -21,11 +20,9 @@ const AiCurriculum = () => {
           title: "Computer Vision",
           week: "Week 2",
           desc: [
-            "Introduction to Solidity programming language",
-            "Solidity syntax, variables, and data types",
-            "Writing and deploying your first smart contract on Ethereum",
-            "Understanding the role of gas in smart contract execution",
-            "Common smart contract vulnerabilities and how to avoid them"
+            "Introduction to Prompt Engineering",
+            "Use cases, jobs, market, etc.",
+            "Understanding basics of Prompt engineering, templates of commonly used prompts, etc.",
           ],
           last_point: null,
         },
@@ -33,11 +30,11 @@ const AiCurriculum = () => {
           title: "ChatBot Dev",
           week: "Week 3",
           desc: [
-            "Introduction to Non-Fungible Tokens (NFTs)",
-            "Creating, minting, and selling NFTs on Ethereum",
-            "Understanding ERC-721 and ERC-1155 NFT standards",
-            "NFT marketplaces and their role in the NFT ecosystem",
-            "NFT use cases beyond digital art, such as gaming and real estate"
+            "Programming in Python",
+            "Understanding Machine Learning",
+            "Understanding unsupervised machine learning & supervised machine learning",
+            "Understanding Computer Vision",
+            "Understanding and Creating Image classification model"
           ],
           last_point: null,
         },
@@ -45,11 +42,10 @@ const AiCurriculum = () => {
           title: "Prompt Engineering",
           week: "Week 4",
           desc: [
-            "Introduction to Decentralized Finance (DeFi)",
-            "DeFi protocols and applications on Ethereum (UniSwap, Aave, Compound, etc.)",
-            "Yield farming, staking, and liquidity mining",
-            "Flash loans and their impact on DeFi",
-            "Risks and challenges in DeFi and how to mitigate them"
+            "Create your ai chatbot (NLP)",
+            "Sentiment analysis of a given text (NLP)",
+            "Build a model that recognizes facial emotions (CV)",
+            "Build a model which detects multiple objects within an image (CV)",
           ],
           last_point: null,
         },
@@ -72,34 +68,43 @@ const AiCurriculum = () => {
             <p className='md:w-[80%] text-lg md:text-2xl font-orbitron'>Best in-class content by leading faculty and industry leaders in the form of live Sessions, 16 hours of learning, 4 AI projects, doubt solving...</p>
             <a href='/Ethereum_Curriculum.pdf' download="Ethereum_Curriculum.pdf" ><button className='font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
         </div>
+        
+        <div className="flex flex-col md:flex-row items-center md:justify-around 
+        bg-gradient-to-r from-indigo-900 to-slate-900 md:w-[75%] w-[90%] mx-auto rounded-lg 
+        shadow-lg border-2 p-6 md:px-8">
+  <div className="flex flex-col items-center justify-center text-center md:mr-8 mb-4 md:mb-0">
+    <div className="rounded-full bg-white w-16 h-16 flex items-center justify-center mb-3">
+      <p className="text-4xl text-indigo-900 font-semibold">16</p>
+    </div>
+    <p className="text-lg font-medium text-white">Hours of learning</p>
+  </div>
 
-        <div className='flex flex-col md:flex-row items-center md:justify-around bg-gradient-to-r from-indigo-900 to-slate-900 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md border-2'>
-            <div className='items-center text-xl my-3 text-center md:mr-12 font-orbitron'>
-                <p className='text-neutral-100 font-semibold mb-2'>16</p>
-                <p className='font-semibold'>Hours of learning</p>
-            </div>
+  <div className="flex flex-col items-center justify-center text-center md:mr-8 mb-4 md:mb-0">
+    <div className="rounded-full bg-white w-16 h-16 flex items-center justify-center mb-3">
+      <p className="text-4xl text-indigo-900 font-semibold">1</p>
+    </div>
+    <p className="text-lg font-medium text-white">Month</p>
+  </div>
 
-            <div className='items-center text-xl my-3 text-center md:mr-12 font-orbitron'>
-                <p className='text-neutral-100 font-semibold mb-2'>1 months</p>
-                <p className='font-semibold'>Duration</p>
-            </div>
+  <div className="flex flex-col items-center justify-center text-center md:mr-8 mb-4 md:mb-0">
+    <div className="rounded-full bg-white w-16 h-16 flex items-center justify-center mb-3">
+      <p className="text-4xl text-indigo-900 font-semibold">4</p>
+    </div>
+    <p className="text-lg font-medium text-white">AI Projects</p>
+  </div>
 
-            <div className='items-center text-xl my-3 md:mr-12 text-center font-orbitron'>
-                <p className='text-neutral-100 font-semibold mb-2'>4</p>
-                <p className='font-semibold'>AI Projects</p>
-            </div>
+  <div className="flex flex-col items-center justify-center text-center">
+    <div className="bg-white w-16 h-16 flex items-center justify-center p-3 rounded-full mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-indigo-900" viewBox="0 0 20 20" fill="currentColor">
+        <path fillRule="evenodd" d="M9.293 16.707a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L9 13.586l7.293-7.293a1 1 0 111.414 1.414l-8 8z" clipRule="evenodd" />
+      </svg>
+    </div>
+    <p className="text-lg font-medium text-white">Certification</p>
+  </div>
+</div>
 
-            {/* <div className='items-center text-xl my-3 md:mr-12 text-center'>
-                <p className='text-neutral-100 font-semibold mb-2'>100%</p>
-                <p className='font-semibold'>Placement assitance</p>
-            </div> */}
 
-            <div className='items-center text-xl my-3 text-center font-orbitron'>
-                <p className='text-neutral-100 font-semibold mb-2'>Certificate</p>
-                <p className='font-semibold flex items-center'>On completion</p>
-            </div>
 
-        </div>
 
         {/* Carousel div */}
         <div className='shadow-md mx-auto mt-20  w-full md:w-2/3'>           

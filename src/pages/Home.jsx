@@ -162,8 +162,26 @@ const Home = () => {
         <div className="box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF] rounded-md">
           <p className="text-5xl mt-24 md:text-7xl font-semibold">Bootcamps</p>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-6 py-16 mb-24">
-            <div className="bg-black flex flex-col items-center col-span-1 p-4 place-self-center rounded-3xl hover:cursor-pointer  md:w-[20%] animate-pulse hover:animate-none hover:scale-125 transition-all">
-              <Link to="/bootcamps/ethereum">
+            <div className="flex flex-col md:flex-row justify-evenly items-center md:items-center 
+             p-4  rounded-3xl 
+          ">
+              <Link to="/bootcamps/ethereum" className="mb-10 md:mb-0 bg-black hover:cursor-pointer 
+             animate-pulse hover:animate-none 
+            hover:scale-125 transition-all py-8">
+                <img
+                  src="/assets/ethereum.png"
+                  alt="ethereum"
+                  width={200}
+                  height={200}
+                  className="w-[80%] mx-auto "
+                />
+                <p className="text-4xl font-semibold">Ethereum</p>
+                <p className="text-2xl font-semibold">(click to explore)</p>
+              </Link>
+
+              <Link to="/bootcamps/aibootcamp" className="bg-black hover:cursor-pointer 
+             animate-pulse hover:animate-none 
+            hover:scale-125 transition-all py-8">
                 <img
                   src="/assets/ethereum.png"
                   alt="ethereum"
@@ -171,7 +189,7 @@ const Home = () => {
                   height={200}
                   className="w-[80%] mx-auto"
                 />
-                <p className="text-4xl font-semibold">Ethereum</p>
+                <p className="text-4xl font-semibold">AI</p>
                 <p className="text-2xl font-semibold">(click to explore)</p>
               </Link>
             </div>
