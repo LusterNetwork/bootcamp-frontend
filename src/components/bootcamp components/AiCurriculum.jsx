@@ -65,7 +65,7 @@ const AiCurriculum = () => {
       
 
   return (
-    <div className='pt-8 mb-12'>
+    <div className='pt-16 mb-12'>
 
         <h1 className='text-4xl md:text-6xl mb-12 font-bold font-bruno'>Curriculum</h1>
         <div className='flex flex-col md:flex-row mb-12 md:justify-between items-center'>

@@ -425,7 +425,7 @@ const Ethereum = () => {
 
         {/* partners section */}
         <section className='flex flex-col items-center justify-center my-5 mt-[8rem]'>
-            <p className='text-center text-xl md:text-5xl font-semibold mb-[2.5rem]'>Our Partners</p>
+            <p className='text-center text-xl md:text-5xl font-semibold mb-[2.5rem]'>Our Education Partners</p>
             <section className='flex flex-wrap justify-center gap-6 w-[75%] mx-auto'>
             <article>
                 <img src='/assets/sphereon.png' height={300} width={300}/>
@@ -454,6 +454,12 @@ const Ethereum = () => {
             <img src="/assets/bananasdk.jpeg" height={90} width={90} />
             <h1 className="font-semibold text-3xl text-yellow-300">
               Banana SDK
+            </h1>
+          </article>
+          <article className="flex gap-4 items-center">
+            <img src="/assets/karan_logo_5.png" height={90} width={90} />
+            <h1 className="font-semibold text-3xl text-sky-300">
+              The Blockchain Hive
             </h1>
           </article>
             </section>

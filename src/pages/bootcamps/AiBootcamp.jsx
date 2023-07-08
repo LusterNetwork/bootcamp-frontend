@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { AiCurriculum } from "../../components/bootcamp components";
 import { Link } from "react-router-dom";
 import { AiOutlineLinkedin } from "react-icons/ai";
-import { BsLinkedin, BsPlusLg, BsTwitter, BsNewspaper } from "react-icons/bs";
+import {
+  BsLinkedin,
+  BsPlusLg,
+  BsTwitter,
+  BsNewspaper,
+  BsPinFill,
+} from "react-icons/bs";
 import { TeamInfo } from "../../components/page components";
 import { reviews } from "../../constants";
 import { faqs } from "../../constants";
@@ -31,24 +37,24 @@ const AiBootcamp = () => {
     setName("Kajal Singh");
     setLinkedin("https://www.linkedin.com/in/kajal-singh-3527a742");
   };
-  const mentorHandler = () => {
-    setContent("Mentor");
-    setSource("/assets/backbone/mentor.jpeg");
-    setName("Mohit Rakhade");
-    setLinkedin("https://www.linkedin.com/in/mohit-rakhade/");
-  };
-  const programmanagerHandler = () => {
-    setContent("Programmanager");
-    setSource("/assets/backbone/manager.jpeg");
-    setName("Pradnyashil Gajbhiye");
-    setLinkedin("https://www.linkedin.com/in/pradnyashil-gajbhiye");
-  };
-  const placementcellHandler = () => {
-    setContent("Placementcell");
-    setSource("/assets/backbone/manager.jpeg");
-    setName("Pradnyashil Gajbhiye");
-    setLinkedin("https://www.linkedin.com/in/pradnyashil-gajbhiye");
-  };
+  // const mentorHandler = () => {
+  //   setContent("Mentor");
+  //   setSource("/assets/backbone/mentor.jpeg");
+  //   setName("Mohit Rakhade");
+  //   setLinkedin("https://www.linkedin.com/in/mohit-rakhade/");
+  // };
+  // const programmanagerHandler = () => {
+  //   setContent("Programmanager");
+  //   setSource("/assets/backbone/manager.jpeg");
+  //   setName("Pradnyashil Gajbhiye");
+  //   setLinkedin("https://www.linkedin.com/in/pradnyashil-gajbhiye");
+  // };
+  // const placementcellHandler = () => {
+  //   setContent("Placementcell");
+  //   setSource("/assets/backbone/manager.jpeg");
+  //   setName("Pradnyashil Gajbhiye");
+  //   setLinkedin("https://www.linkedin.com/in/pradnyashil-gajbhiye");
+  // };
 
   const clickButton =
     " border p-3 md:text-2xl font-semibold my-2 rounded-xl bg-gradient-to-r from-[#58AFEF] to-[#9374DC] mx-2 md:mx-8";
@@ -59,63 +65,71 @@ const AiBootcamp = () => {
     <main className="md:w-[90%] mx-auto">
       {/*Landing section*/}
       <section className="px-8">
-      <div className="pt-36 min-h-[95vh] flex flex-col items-center justify-center">
-  <div className="flex flex-col mb-4 md:my-10 md:flex-row">
-    <p className="text-[#006DF6] m-0 text-[55px] text-center font-bold">
-      <span className="text-7xl text-neutral-100 m-0 font-piazzolla tracking-wide">
-      <Typed
-          strings={[
-            "Artificial Intelligence Bootcamp",
-          ]}
-          typeSpeed={170}
-          backSpeed={100}
-          loop
-        />
-        </span>
-    </p>
-  </div>
-  <div className="container">
-    <div className="mt-10 bg-gradient-to-bl from-gray-700 via-gray-900 to-black text-white py-12 px-8 rounded-lg shadow-lg">
-      <h1 className="text-4xl md:text-4xl font-bold text-center mb-8 font-bruno tracking-wider">
-        Become an Entry-Level AI/ML Developer within 1 Month
-      </h1>
-      <div className="flex flex-col space-y-4">
-        <p className="text-lg md:text-xl text-center font-orbitron">
-          Learn ChatGPT, Chatbot Development, NLP, Computer Vision, and more
-        </p>
-        <p className="text-lg md:text-xl text-center font-orbitron">
-          from an expert with personalized career guidance.
-        </p>
-      </div>
-      <div className="flex flex-col space-y-4 mt-8">
-        <p className="text-lg md:text-xl text-center font-orbitron">Be ready for the</p>
-        <p className="text-2xl md:text-3xl font-bold text-center font-orbitron">
-          $15.7 Trillion Artificial Intelligence Global Market
-        </p>
-        <p className="text-2xl md:text-3xl font-bold text-center font-orbitron">
-          and 97 Million Jobs by 2030
-        </p>
-      </div>
-    </div>
-  </div>
-  <div className="button md:mt-8 mt-4">
-    <a
-      href={"/register"}
-      className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
-    >
-      <button>Register now!</button>
-    </a>
-  </div>
-</div>
-
+        <div className="pt-36 min-h-[95vh] flex flex-col items-center justify-center">
+          <div className="flex flex-col mb-4 md:my-10 md:flex-row">
+            <p className="text-[#006DF6] m-0 text-[55px] text-center font-bold">
+              <span className="text-5xl md:text-7xl text-neutral-100 m-0 font-piazzolla tracking-wide">
+                <Typed
+                  strings={["Artificial Intelligence Bootcamp"]}
+                  typeSpeed={170}
+                  backSpeed={100}
+                  loop
+                />
+              </span>
+            </p>
+          </div>
+          <div className="container">
+            <div className="mt-10 bg-gradient-to-bl from-gray-700 via-gray-900 to-black text-white pt-10 pb-16 px-8 rounded-lg shadow-lg">
+              <h1 className="text-3xl leading-relaxed md:leading-none md:text-4xl font-bold text-center mb-16 font-bruno tracking-wider">
+                Become an Entry-Level AI/ML Developer within 1 Month
+              </h1>
+              <div className="flex flex-col space-y-4">
+                <p className="text-lg md:text-xl text-center font-orbitron">
+                  Learn ChatGPT, Chatbot Development, NLP, Computer Vision, and
+                  more
+                </p>
+                <p className="text-lg md:text-xl text-center font-orbitron">
+                  from an expert with personalized career guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="button md:mt-8 mt-4">
+            <a
+              href={"/register"}
+              className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
+            >
+              <button>Register now!</button>
+            </a>
+          </div>
+        </div>
 
         <div id="Curriculum" className="">
           <AiCurriculum />
         </div>
+        <div className="px-8 md:px-28 text-center text-white py-12 flex flex-col items-center">
+          <div className="rounded-full bg-white w-20 h-20 flex items-center justify-center mb-6">
+            <BsPinFill className="text-purple-500 text-4xl" />
+          </div>
+          <p className="text-3xl font-medium font-orbitron">
+            <span className="text-purple-500 block text-5xl mb-4">
+              $15.7 Trillion
+            </span>
+            Artificial Intelligence global market and
+            <span className="text-purple-500 block text-5xl my-4">
+              97 Million
+            </span>{" "}
+            jobs by 2030.
+          </p>
+        </div>
 
-        <div className="flex flex-col border-3 items-center text-center justify-center md:my-16 py-12">
-          <p className="font-bold text-5xl font-bruno">Connect for free consultation</p>
-          <p className="text-2xl my-8 font-orbitron">Schedule online meet now!</p>
+        <div className="flex flex-col border-3 items-center text-center justify-center md:mb-16 py-12">
+          <p className="font-bold text-3  xl md:text-5xl font-bruno">
+            Connect for free consultation
+          </p>
+          <p className="text-2xl my-8 font-orbitron">
+            Schedule online meet now!
+          </p>
           <a
             href="https://calendly.com/lusternetwork/pradnyashil"
             target="_blank"
@@ -131,7 +145,7 @@ const AiBootcamp = () => {
         <div className="text-left md:w-[65%]">
           <div className="text-4xl md:text-6xl text-white font-semibold md:w-[75%] font-bruno">
             <p>
-              <span className="">Become a</span>
+              <span className="">Become an</span>
               <span className=""> AI Developer</span>
               <span className=""> in 16 hours</span>
               {/* <span className='text-[#006DF6]'> 6 LPA</span> */}
@@ -142,7 +156,7 @@ const AiBootcamp = () => {
             <div
               className={`border rounded-md my-1 px-3 py-1 text-[16px] mx-3`}
             >
-              Batch of 30 students
+              Batch of only 50 students
             </div>
             <div
               className={`border  rounded-md my-1 px-3 py-1 text-[16px] mx-3`}
@@ -168,12 +182,7 @@ const AiBootcamp = () => {
               {" "}
               AI certification after learning
             </div>
-            <div
-              className={`border rounded-md my-1 px-3 py-1 text-[16px] mx-3`}
-            >
-              {" "}
-              Job placement
-            </div>
+
             <div
               className={`border rounded-md my-1 px-3 py-1 text-[16px] mx-3`}
             >
@@ -213,7 +222,7 @@ const AiBootcamp = () => {
       </section>
 
       {/* champions section */}
-      <section className="px-8 md:px-8 text-center">
+      {/* <section className="px-8 md:px-8 text-center">
         <div>
           <p className="text-5xl md:text-5xl mt-24 mb-12 font-semibold">
             Our Champions
@@ -368,24 +377,26 @@ const AiBootcamp = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-      </section>
+      </section> */}
 
       {/* additional info section */}
-      <section>
-        <div className="grid grid-cols-1 px-4 md:px-0 md:grid-cols-2 min-h-[94vh]">
+      <section className="text-center md:text-left">
+        <div className="grid mt-12 grid-cols-1 px-4 md:px-0 md:grid-cols-2 min-h-[94vh]">
           <div className="col-span-1 place-self-center">
             <img
-              src="/assets/menwomentwo.png"
+              src="/assets/My project-1.png"
               alt="menwomen"
-              className="h-[22rem] md:h-[30rem] mb-8 md:mb-0 w-[18rem] md:w-[27rem]"
+              className="h-[22rem] md:h-[30rem] w-[18rem] md:w-[27rem] object-cover brightness-150"
             />
           </div>
 
-          <div className="col-span-1 place-self-center">
+          <div className="flex justify-center flex-col items-center md:items-start">
             <span className="text-3xl md:text-5xl font-semibold font-bruno">
               Thinking about switching career?
             </span>
-            <p className="text-2xl md:text-2xl mt-4 font-orbitron">Pick AI development!</p>
+            <p className="text-2xl md:text-2xl mt-4 font-orbitron">
+              Pick AI development!
+            </p>
             <p className="text-xl md:text-3xl my-8 md:my-12 font-orbitron">
               What is holding you back?
             </p>
@@ -398,7 +409,7 @@ const AiBootcamp = () => {
           </div>
         </div>
 
-        <div className="flex items-center my-16 justify-center min-h-[13rem] relative">
+        <div className="flex px-4 md:px-0 items-center mt-4 mb-8 md:mb-20 justify-center min-h-[13rem] relative">
           <img
             src="/assets/blubo.png"
             alt="blubo"
@@ -440,7 +451,7 @@ const AiBootcamp = () => {
               {" "}
               Educator{" "}
             </button>
-            <button
+            {/* <button
               className={`${
                 content === "Mentor" ? `${clickButton}` : `${unclickedButton}`
               }`}
@@ -448,9 +459,9 @@ const AiBootcamp = () => {
             >
               {" "}
               Mentor{" "}
-            </button>
+            </button> */}
 
-            <button
+            {/* <button
               className={`${
                 content === "Placementcell"
                   ? `${clickButton}`
@@ -460,7 +471,7 @@ const AiBootcamp = () => {
             >
               {" "}
               Placement Cell{" "}
-            </button>
+            </button> */}
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center md:gap-4 font-orbitron">
@@ -550,19 +561,19 @@ const AiBootcamp = () => {
       </section>
 
       {/* fees section */}
-      <section className="flex flex-col py-12 md:mt-12 text-center min-h-[94vh] justify-center items-center">
-        <p className="text-7xl font-bruno">Fees Structure</p>
+      <section className="flex flex-col py-12 md:mt-12 text-center md:min-h-[94vh] justify-center items-center">
+        <p className="text-4xl md:text-6xl font-bruno">Fees Structure</p>
 
         <div className="flex flex-wrap justify-between mt-16 items-center px-[10%]">
           <div className="flex flex-col items-center">
             <div className="flex flex-col gap-12 my-15 items-center justify-center">
               <div className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
-                <div className="text-3xl md:text-7xl font-bold mb-1 font-orbitron">
-                  ₹9,999 Only
+                <div className="text-3xl md:text-5xl font-bold mb-1 font-orbitron">
+                  ₹9,999 Only for this batch
                 </div>
-                <p className="text-[16px] md:text-[24px] mb-2 mt-8 font-orbitron">
-                  <b></b>For Bootcamp
-                </p>
+                <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron line-through">
+                  ₹19,999 for others batch
+                </div>
                 {/* <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p> */}
                 {/* <p className='text-[16px] md:text-[24px] my-2'><b>Upfront fee:</b> ₹40,000</p> */}
               </div>
@@ -584,70 +595,88 @@ const AiBootcamp = () => {
 
       {/* Why to learn now? */}
       <section class="flex flex-col items-center justify-center bg-gray-100 rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-        <h2 class="text-4xl font-bold mb-8 text-black font-bruno">Why learn AI/ML now?</h2>
+        <h2 class="text-4xl font-bold mb-8 text-black font-bruno">
+          Why learn AI/ML now?
+        </h2>
         <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
-          <BsTwitter/>
+          <BsTwitter />
           <p>Elon Musk's Tweet about AI</p>
         </div>
         <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
-          <BsNewspaper  />
+          <BsNewspaper />
           <p>Multiple Newspaper/Tweets attached</p>
         </div>
-        <p class="text-gray-900 mb-6 text-lg font-medium font-orbitron">
-          If you think that this is not the right time, you will lose your
-          competitive edge in the fast-growing AI/ML world
-        </p>
-        <p class="text-gray-900 text-lg font-medium font-orbitron">
-          By 2030, VCs will be investing $154 billion in AI startups globally to
-          generate 97 million jobs
-        </p>
-        <Link to="/register"
-  class="h-12 px-8 mt-8 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
-  Register Now</Link>
+
+        <Link
+          to="/register"
+          class="h-12 px-8 mt-2 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
+        >
+          Register Now
+        </Link>
       </section>
 
+      <div className="text-center md:mt-16 py-12 px-4 md:px-24 text-white font-orbitron">
+        <h2 className="text-4xl font-bold text-gray-200 mb-8 leading-relaxed">
+          Unleash the Power of AI/ML for Unmatched Competitive Advantage
+        </h2>
+        <p className="text-lg text-gray-300 leading-loose tracking-wider">
+          By 2030, the global AI startup ecosystem is set to receive a
+          staggering{" "}
+          <span className="text-indigo-400 font-semibold">$154 billion</span> in
+          venture capital investments, igniting the creation of{" "}
+          <span className="text-indigo-400 font-semibold">97 million</span>{" "}
+          high-skilled jobs.
+        </p>
+      </div>
+
       {/* Outcome */}
-      <section class="mt-12 flex flex-col items-center justify-center 
-      bg-gradient-to-l from-gray-700 via-gray-900 to-black rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-  <h2 class="text-4xl font-bold text-white mb-8 font-bruno">Outcomes</h2>
+      <section class="flex flex-col items-center justify-center px-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
+  <h2 class="text-4xl font-bold text-gray-900 mb-8 leading-relaxed">Outcomes</h2>
 
-  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
-    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M2 5a1 1 0 011-1h14a1 1 0 010 2H3a1 1 0 01-1-1zm1 4a1 1 0 100 2h14a1 1 0 100-2H3zm1 4a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm16-6a1 1 0 000-2H5a1 1 0 000 2h14z"></path>
-    </svg>
-    <p class="text-lg font-medium">Get Certificate on Completion</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+      <svg class="w-12 h-12 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2 5a1 1 0 011-1h14a1 1 0 010 2H3a1 1 0 01-1-1zm1 4a1 1 0 100 2h14a1 1 0 100-2H3zm1 4a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zm16-6a1 1 0 000-2H5a1 1 0 000 2h14z"></path>
+      </svg>
+      <p class="text-lg font-medium text-center">Get Certificate on Completion</p>
+    </div>
+
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+      <svg class="w-12 h-12 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M9 3a1 1 0 00-.707.293L6 5.586 7.414 7l1.293-1.293A1 1 0 009 5V3zm7 2h-1.172l-2.5 5H16a1 1 0 001-1V5zm-2.55 12.95a1 1 0 01-1.045-.45l-2-3a1 1 0 01.195-1.39A1 1 0 0110 13h4.58l1.464 2.197a1 1 0 01-.195 1.39l-2 1a1 1 0 01-.514.14zm-3.452-4.798l-2 5a1 1 0 01-1.85-.832l2-5a1 1 0 111.85.832zm-1.383 3.457l1.5-3.75 1.5 3.75h-3zm-6.615 3.32a1 1 0 11-.33-1.936l4-1a1 1 0 11.66 1.872l-4 1z" clip-rule="evenodd"></path>
+      </svg>
+      <p class="text-lg font-medium text-center">Job/Internship opportunities</p>
+    </div>
+
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+      <svg class="w-12 h-12 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M2 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM3 9a1 1 0 100 2h14a1 1 0 100-2H3zm1 4a1 1 0 011-1h14a1 1 0 010 2H3a1 1 0 01-1-1zm12-6a1 1 0 011-1h1v11a2 2 0 01-2 2H3a2 2 0 01-2-2V6h1a1 1 0 110 2H1v9a4 4 0 004 4h12a4 4 0 004-4V9h-1a1 1 0 110-2h1zm-2-2H3a1 1 0 110-2h12a1 1 0 110 2z" clip-rule="evenodd"></path>
+      </svg>
+      <p class="text-lg font-medium text-center">Career Guidance in the AI World</p>
+    </div>
+
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+      <svg class="w-12 h-12 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M4 8a1 1 0 01-1-1V4a1 1 0 112 0v3a1 1 0 01-1 1zm12-1a1 1 0 00-1-1V4a1 1 0 00-2 0v3a1 1 0 01-1 1H9a1 1 0 01-1-1V4a1 1 0 00-2 0v3a3 3 0 003 3h4a3 3 0 003-3V4a1 1 0 00-2 0v3zm-1 3H9a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+      </svg>
+      <p class="text-lg font-medium text-center">4 Real-World AI Projects</p>
+    </div>
   </div>
 
-  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
-    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M9 3a1 1 0 00-.707.293L6 5.586 7.414 7l1.293-1.293A1 1 0 009 5V3zm7 2h-1.172l-2.5 5H16a1 1 0 001-1V5zm-2.55 12.95a1 1 0 01-1.045-.45l-2-3a1 1 0 01.195-1.39A1 1 0 0110 13h4.58l1.464 2.197a1 1 0 01-.195 1.39l-2 1a1 1 0 01-.514.14zm-3.452-4.798l-2 5a1 1 0 01-1.85-.832l2-5a1 1 0 111.85.832zm-1.383 3.457l1.5-3.75 1.5 3.75h-3zm-6.615 3.32a1 1 0 11-.33-1.936l4-1a1 1 0 11.66 1.872l-4 1z" clip-rule="evenodd"></path>
-    </svg>
-    <p class="text-lg font-medium">Job/Internship opportunities</p>
-  </div>
-
-  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
-    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M2 5a1 1 0 011-1h14a1 1 0 110 2H3a1 1 0 01-1-1zM3 9a1 1 0 100 2h14a1 1 0 100-2H3zm1 4a1 1 0 011-1h10a1 1 0 010 2H5a1 1 0 01-1-1zm12-6a1 1 0 011-1h1v11a2 2 0 01-2 2H3a2 2 0 01-2-2V6h1a1 1 0 110 2H1v9a4 4 0 004 4h12a4 4 0 004-4V9h-1a1 1 0 110-2h1zm-2-2H3a1 1 0 110-2h12a1 1 0 110 2z" clip-rule="evenodd"></path>
-    </svg>
-    <p class="text-lg font-medium">Career Guidance in the AI World</p>
-  </div>
-
-  <div class="flex items-center space-x-4 text-white mb-6 font-orbitron">
-    <svg class="w-8 h-8  text-white" fill="currentColor" viewBox="0 0 20 20">
-      <path fill-rule="evenodd" d="M4 8a1 1 0 01-1-1V4a1 1 0 112 0v3a1 1 0 01-1 1zm12-1a1 1 0 00-1-1V4a1 1 0 00-2 0v3a1 1 0 01-1 1H9a1 1 0 01-1-1V4a1 1 0 00-2 0v3a3 3 0 003 3h4a3 3 0 003-3V4a1 1 0 00-2 0v3zm-1 3H9a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-    </svg>
-    <p class="text-lg font-medium">4 Real-World AI Projects</p>
-  </div>
-
-  <Link to="/register" class="bg-white text-blue-500 hover:text-blue-600 text-lg font-semibold py-4 px-10 rounded-full transition-colors duration-300">
-    Register Now
-  </Link>
+  <Link
+          to="/register"
+          class="h-12 px-8 mt-16 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
+        >
+          Register Now
+        </Link>
 </section>
 
+
+
       {/* partners section */}
-      <section className="flex flex-col items-center justify-center my-5 mt-[8rem]">
+      <section className="flex flex-col items-center justify-center my-5 mt-[5rem]">
         <p className="text-center text-xl md:text-5xl font-semibold mb-[2.5rem]">
-          Our Partners
+          Our Education Partners
         </p>
         <section className="flex flex-wrap justify-center gap-6 w-[75%] mx-auto">
           <article>
@@ -679,6 +708,12 @@ const AiBootcamp = () => {
             <img src="/assets/bananasdk.jpeg" height={90} width={90} />
             <h1 className="font-semibold text-3xl text-yellow-300">
               Banana SDK
+            </h1>
+          </article>
+          <article className="flex gap-4 items-center">
+            <img src="/assets/karan_logo_5.png" height={90} width={90} />
+            <h1 className="font-semibold text-3xl text-sky-300">
+              The Blockchain Hive
             </h1>
           </article>
         </section>
