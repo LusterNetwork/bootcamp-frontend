@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { AiCurriculum } from "../../components/bootcamp components";
 import { Link } from "react-router-dom";
-import { AiOutlineLinkedin } from "react-icons/ai";
 import {
   BsLinkedin,
   BsPlusLg,
@@ -596,25 +595,49 @@ const AiBootcamp = () => {
 
       {/* Why to learn now? */}
       <section class="flex flex-col items-center justify-center bg-gray-100 rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-        <h2 class="text-4xl font-bold mb-8 text-black font-bruno">
-          Why learn AI/ML now?
-        </h2>
-        <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
-          <BsTwitter />
-          <p>Elon Musk's Tweet about AI</p>
-        </div>
-        <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
-          <BsNewspaper />
-          <p>Multiple Newspaper/Tweets attached</p>
-        </div>
+  <h2 class="text-4xl font-bold mb-8 text-black font-bruno">
+    Why Learn AI/ML Now?
+  </h2>
+  <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
+    <span class="text-blue-500">
+     <BsTwitter/>
+    </span>
+    <p class="ml-1">Elon Musk's Insight on AI</p>
+  </div>
+  <div class="">
+    <img src="/assets/image5.png" alt="Elon Musk's tweet" class="w-full max-w-md mb-6 rounded-lg shadow-lg" />
+  </div>
+  <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
+    <span class="">
+    <BsNewspaper/>
+    </span>
+    <p class="ml-1">Media Coverage and Opinions</p>
+  </div>
+  <div class="flex flex-col md:flex-row">
+  <div class="flex flex-col md:w-1/2 lg:w-2/5 xl:w-1/2">
+    <div class="transform rotate-[-2deg] mb-4 md:mb-0">
+      <img src="/assets/image1.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
+    <div class="transform rotate-[1deg]">
+      <img src="/assets/image3.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
+  </div>
+  <div class="flex flex-col md:w-1/2 lg:w-3/5 xl:w-1/2">
+    <div class="transform rotate-[4deg] mb-4 md:mb-0">
+      <img src="/assets/image2.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
+    <div class="transform rotate-[-3deg]">
+      <img src="/assets/image4.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
+  </div>
+</div>
 
-        <Link
-          to="/register"
-          class="h-12 px-8 mt-2 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
-        >
-          Register Now
-        </Link>
-      </section>
+
+  <a href="/register" class="mt-6 px-8 py-3 text-lg font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
+    Register Now
+  </a>
+</section>
+
 
       <div className="text-center md:mt-16 py-12 px-4 md:px-24 text-white font-orbitron">
         <h2 className="text-4xl font-bold text-gray-200 mb-8 leading-relaxed">

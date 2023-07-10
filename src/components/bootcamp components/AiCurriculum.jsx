@@ -6,7 +6,7 @@ const AiCurriculum = () => {
 
     const content = [
         {
-          title: "Natural language processing",
+          title: "Introduction to AI",
           week: "Week 1",
           desc: [
             "Introduction to Artificial Intelligence, Machine Learning, Deep Learning and Generative AI",
@@ -17,7 +17,7 @@ const AiCurriculum = () => {
           last_point: null,
         },
         {
-          title: "Computer Vision",
+          title: "Master Prompt Engineering",
           week: "Week 2",
           desc: [
             "Introduction to Prompt Engineering",
@@ -27,7 +27,7 @@ const AiCurriculum = () => {
           last_point: null,
         },
         {
-          title: "ChatBot Dev",
+          title: "Learn Machine Learning",
           week: "Week 3",
           desc: [
             "Programming in Python",
@@ -39,21 +39,13 @@ const AiCurriculum = () => {
           last_point: null,
         },
         {
-          title: "Prompt Engineering",
+          title: "Build AI/ML projects",
           week: "Week 4",
           desc: [
             "Create your ai chatbot (NLP)",
             "Sentiment analysis of a given text (NLP)",
             "Build a model that recognizes facial emotions (CV)",
             "Build a model which detects multiple objects within an image (CV)",
-          ],
-          last_point: null,
-        },
-        {
-          title: "Final Project",
-          week: "Final",
-          desc: [
-            "Building a decentralized application (dApp) that utilizes one or more of the concepts covered in the bootcamp"
           ],
           last_point: null,
         },
@@ -66,7 +58,7 @@ const AiCurriculum = () => {
         <h1 className='text-4xl md:text-6xl mb-12 font-bold font-bruno'>Curriculum</h1>
         <div className='flex flex-col md:flex-row mb-12 md:justify-between items-center'>
             <p className='md:w-[80%] text-lg md:text-2xl font-orbitron'>Best in-class content by leading faculty and industry leaders in the form of live Sessions, 16 hours of learning, 4 AI projects, doubt solving...</p>
-            <a href='/Ethereum_Curriculum.pdf' download="Ethereum_Curriculum.pdf" ><button className='font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
+            <a href='/AI_Curriculum.pdf' download="AI_Curriculum.pdf" ><button className='font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center '>Curriculum <IoMdDownload className='ml-2'/></button></a>
         </div>
         
         <div className="flex flex-col md:flex-row items-center md:justify-around 
