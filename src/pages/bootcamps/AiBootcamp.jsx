@@ -211,7 +211,7 @@ const AiBootcamp = () => {
       </section>
 
       <section className="px-8 pt-24 md:px-24 text-center">
-        <div className="font-orbitron bg-gradient-to-r from-purple-500 to-blue-500 p-5 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md">
+        <div className="font-orbitron  bg-gradient-to-bl from-gray-700 via-gray-900 to-black p-5 md:w-[75%] w-[90%] mx-auto rounded-lg shadow-md">
           <p className="px-2 md:px-24 md:text-center text-left my-7 text-3xl leading-8">
             You can be in top 0.1% AI Developers!
           </p>
@@ -513,7 +513,7 @@ const AiBootcamp = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={i}>
-                <div className="font-orbitron flex flex-col p-8 items-center bg-black justify-center rounded-md mb-10">
+                <div className="font-orbitron flex flex-col p-8 items-center  bg-gradient-to-bl from-gray-700 via-gray-900 to-black justify-center rounded-md mb-10">
                   <picture className="flex items-center justify-center">
                     <img
                       src={person.image}
@@ -543,7 +543,7 @@ const AiBootcamp = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={person.name}>
-                <div className="flex h-[30rem] flex-col p-8 items-center w-[28rem] bg-black shadow-md rounded-3xl justify-center m-20 mx-auto">
+                <div className="flex h-[30rem] flex-col p-8 items-center w-[28rem]  bg-gradient-to-bl from-gray-700 via-gray-900 to-black shadow-md rounded-3xl justify-center m-20 mx-auto">
                   <picture>
                     <img
                       src={person.image}
@@ -569,10 +569,10 @@ const AiBootcamp = () => {
             <div className="flex flex-col gap-12 my-15 items-center justify-center">
               <div className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
                 <div className="text-3xl md:text-5xl font-bold mb-1 font-orbitron">
-                  ₹9,999 Only for this batch
+                  ₹9,999 Only for first 50 students
                 </div>
                 <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron ">
-                <span className="line-through">₹19,999</span>  from next batch
+                <span className="line-through">₹19,999</span>  onwards
                 </div>
                 {/* <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p> */}
                 {/* <p className='text-[16px] md:text-[24px] my-2'><b>Upfront fee:</b> ₹40,000</p> */}
@@ -605,7 +605,7 @@ const AiBootcamp = () => {
     <p class="ml-1">Elon Musk's Insight on AI</p>
   </div>
   <div class="">
-    <img src="/assets/image5.png" alt="Elon Musk's tweet" class="w-full max-w-md mb-6 rounded-lg shadow-lg" />
+    <img src="/assets/image1.png" alt="Elon Musk's tweet" class="w-full max-w-md mb-6 rounded-lg shadow-lg" />
   </div>
   <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
     <span class="">
@@ -615,18 +615,18 @@ const AiBootcamp = () => {
   </div>
   <div class="flex flex-col md:flex-row">
   <div class="flex flex-col md:w-1/2 lg:w-2/5 xl:w-1/2">
-    <div class="transform rotate-[-2deg] mb-4 md:mb-0">
-      <img src="/assets/image1.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
+    <div class="transform rotate-[-2deg] mb-4 p-1">
+      <img src="/assets/image5.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
-    <div class="transform rotate-[1deg]">
+    <div class="transform rotate-[1deg] p-1">
       <img src="/assets/image3.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
   </div>
   <div class="flex flex-col md:w-1/2 lg:w-3/5 xl:w-1/2">
-    <div class="transform rotate-[4deg] mb-4 md:mb-0">
+    <div class="transform rotate-[4deg] mb-4 p-1">
       <img src="/assets/image2.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
-    <div class="transform rotate-[-3deg]">
+    <div class="transform rotate-[-3deg] p-1">
       <img src="/assets/image4.png" alt="AI/ML" class="w-full h-auto rounded-lg shadow-lg" />
     </div>
   </div>

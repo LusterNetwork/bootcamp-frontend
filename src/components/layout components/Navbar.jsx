@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { FaBrain } from "react-icons/fa";
 import Timer from "../../pages/Timer.jsx";
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -15,6 +15,8 @@ const Header = () => {
   const toggle = () => {
     setActive(!active);
   };
+  const location=useLocation().pathname.split("/");
+ 
 
   return (
     <>
@@ -29,9 +31,11 @@ const Header = () => {
               LUSTER
             </h1>
           </div>
-          <div className="md:ml-16">
+          {location[2]=="aibootcamp" && (
+            <div className="md:ml-16">
             <Timer />
           </div>
+            )}
           <div>
           <div className={active ? "block" : "hidden"}>
   <div className="absolute top-[4.65rem] left-0 right-0 w-full px-2 rounded-b-md ">

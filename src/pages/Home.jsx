@@ -312,7 +312,7 @@ const Home = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col p-8 items-center bg-black rounded-md mb-10">
+                <div className="flex flex-col p-8 items-center  bg-gradient-to-bl from-gray-700 via-gray-900 to-black rounded-md mb-10">
                   <picture className="flex items-center justify-center">
                     <img
                       src={person.image}
@@ -342,7 +342,7 @@ const Home = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={person.name}>
-                <div className="flex h-[30rem] flex-col p-8 items-center w-[28rem] bg-black shadow-md rounded-3xl justify-center m-20 mx-auto">
+                <div className="flex h-[30rem] flex-col p-8 items-center w-[28rem]  bg-gradient-to-bl from-gray-700 via-gray-900 to-black shadow-md rounded-3xl justify-center m-20 mx-auto">
                   <picture>
                     <img
                       src={person.image}
