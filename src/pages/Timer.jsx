@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { MdOutlineCancel } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-const Timer = () => {
+const Timer = ({ isShow, func }) => {
   const HOURS = 1000 * 60 * 60;
   const MINUTES = 1000 * 60;
 
@@ -42,49 +44,71 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="flex justify-center gap-0 md:gap-1 text-center">
-      <div className="flex flex-col p-1 md:p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-xl md:text-4xl">
-          <span>
-            {remainingTime.days < 10
-              ? `0${remainingTime.days}`
-              : remainingTime.days}
-          </span>
-        </span>
-        days
-      </div>
-      <span className="text-4xl self-center">:</span>
-      <div className="flex flex-col p-1 md:p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-xl md:text-4xl">
-          <span>
-            {remainingTime.hours < 10
-              ? `0${remainingTime.hours}`
-              : remainingTime.hours}
-          </span>
-        </span>
-        hours
-      </div>
-      <span className="text-4xl self-center">:</span>
-      <div className="flex flex-col p-1 md:p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-xl md:text-4xl">
-          <span>
-            {remainingTime.minutes < 10
-              ? `0${remainingTime.minutes}`
-              : remainingTime.minutes}
-          </span>
-        </span>
-        min
-      </div>
-      <span className="text-4xl self-center">:</span>
-      <div className="flex flex-col p-1 md:p-2 bg-neutral rounded-box text-neutral-content">
-        <span className="countdown font-mono text-xl md:text-4xl">
-          <span>
-            {remainingTime.seconds < 10
-              ? `0${remainingTime.seconds}`
-              : remainingTime.seconds}
-          </span>
-        </span>
-        sec
+    <div className="fixed z-10 inset-0 bg-opacity-80 flex flex-col items-center justify-center bg-gray-800">
+      <div className="bg-white shadow-xl rounded-md px-24 py-12 text-black relative">
+        <button
+          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          onClick={() => func(!isShow)}
+        >
+          <MdOutlineCancel size={24} />
+        </button>
+        <h2 className="text-lg md:text-3xl font-extrabold mb-4 font-bruno text-green-600">
+          Early Bird Offer: Rs. 9999{" "}
+        </h2>
+        <div className="flex items-center justify-center space-x-2 text-center">
+          <div className="flex flex-col items-center m-2 p-2 bg-slate-200 rounded-lg">
+            <span className="text-3xl font-bold">
+              {remainingTime.days < 10
+                ? `0${remainingTime.days}`
+                : remainingTime.days}
+            </span>
+            <span className="text-xs mt-1 font-bold">Days</span>
+          </div>
+          <span className="text-4xl font-extrabold text-black">:</span>
+          <div className="flex flex-col items-center m-2 p-2 bg-slate-200 rounded-lg">
+            <span className="text-3xl font-bold">
+              {remainingTime.hours < 10
+                ? `0${remainingTime.hours}`
+                : remainingTime.hours}
+            </span>
+            <span className="text-xs mt-1 font-bold ">Hours</span>
+          </div>
+          <span className="text-4xl font-extrabold text-black">:</span>
+          <div className="flex flex-col items-center m-2 p-2 bg-slate-200 rounded-lg">
+            <span className="text-3xl font-bold">
+              {remainingTime.minutes < 10
+                ? `0${remainingTime.minutes}`
+                : remainingTime.minutes}
+            </span>
+            <span className="text-xs mt-1 font-bold ">Minutes</span>
+          </div>
+          <span className="text-4xl font-extrabold text-black">:</span>
+          <div className="flex flex-col items-center m-2 p-2 bg-slate-200 rounded-lg">
+            <span className="text-3xl font-bold">
+              {remainingTime.seconds < 10
+                ? `0${remainingTime.seconds}`
+                : remainingTime.seconds}
+            </span>
+            <span className="text-xs mt-1 font-bold ">Seconds</span>
+          </div>
+        </div>
+        <div className="flex flex-col  items-center mt-2">
+          <h2 className="text-lg md:text-3xl font-extrabold font-orbitron mb-2 text-red-600 animate-bounce">
+            Hurry Up!
+          </h2>
+          <p className="text-sm md:text-2xl font-extrabold mb-2 font-orbitron">
+            Limited Time Offer
+          </p>
+          <Link
+            to="/register"
+            className=" h-12 mt-2 px-8  font-bold text-xl flex items-center justify-center
+            rounded-md 
+           bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors 
+           hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
+          >
+            Register Now
+          </Link>
+        </div>
       </div>
     </div>
   );

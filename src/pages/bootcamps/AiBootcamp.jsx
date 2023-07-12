@@ -21,6 +21,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css/effect-creative";
+import {Timer} from "../index";
 
 const AiBootcamp = () => {
   const [content, setContent] = useState("Educator");
@@ -29,6 +30,7 @@ const AiBootcamp = () => {
   const [Linkedin, setLinkedin] = useState(
     "https://www.linkedin.com/in/kajal-singh-3527a742"
   );
+  const[isShow,setIsShow]=useState(false);
 
   const educatorHandler = () => {
     setContent("Educator");
@@ -36,44 +38,38 @@ const AiBootcamp = () => {
     setName("Kajal Singh");
     setLinkedin("https://www.linkedin.com/in/kajal-singh-3527a742");
   };
-  // const mentorHandler = () => {
-  //   setContent("Mentor");
-  //   setSource("/assets/backbone/mentor.jpeg");
-  //   setName("Mohit Rakhade");
-  //   setLinkedin("https://www.linkedin.com/in/mohit-rakhade/");
-  // };
-  // const programmanagerHandler = () => {
-  //   setContent("Programmanager");
-  //   setSource("/assets/backbone/manager.jpeg");
-  //   setName("Pradnyashil Gajbhiye");
-  //   setLinkedin("https://www.linkedin.com/in/pradnyashil-gajbhiye");
-  // };
-  // const placementcellHandler = () => {
-  //   setContent("Placementcell");
-  //   setSource("/assets/backbone/manager.jpeg");
-  //   setName("Pradnyashil Gajbhiye");
-  //   setLinkedin("https://www.linkedin.com/in/pradnyashil-gajbhiye");
-  // };
 
   const clickButton =
     " border p-3 md:text-2xl font-semibold my-2 rounded-xl bg-gradient-to-r from-[#58AFEF] to-[#9374DC] mx-2 md:mx-8";
   const unclickedButton =
     "border p-3 rounded-xl font-semibold md:text-2xl my-2 hover:bg-gray-800 mx-2 md:mx-8";
 
+    const handleTypedMouseEnter = () => {
+      if (!isShow) {
+        setIsShow(true);
+      }
+    };
+    
+
+    console.log(isShow);
+
   return (
+    <>
     <main className="md:w-[90%] mx-auto">
       {/*Landing section*/}
       <section className="px-8">
         <div className="pt-36 min-h-[95vh] flex flex-col items-center justify-center">
           <div className="flex flex-col mb-4 md:my-10 md:flex-row">
             <p className="text-[#006DF6] m-0 text-[55px] text-center font-bold">
-              <span className="text-5xl md:text-7xl text-neutral-100 m-0 font-piazzolla tracking-wide">
+              <span 
+                onMouseEnter={handleTypedMouseEnter}
+              className="text-5xl md:text-7xl text-neutral-100 m-0 font-piazzolla tracking-wide">
                 <Typed
                   strings={["Artificial Intelligence Bootcamp"]}
                   typeSpeed={170}
                   backSpeed={100}
                   loop
-                />
+                  />
               </span>
             </p>
           </div>
@@ -221,164 +217,6 @@ const AiBootcamp = () => {
         </div>
       </section>
 
-      {/* champions section */}
-      {/* <section className="px-8 md:px-8 text-center">
-        <div>
-          <p className="text-5xl md:text-5xl mt-24 mb-12 font-semibold">
-            Our Champions
-          </p>
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={0}
-            pagination={{ clickable: true }}
-            modules={[Navigation, Pagination, Autoplay]}
-            autoplay={true}
-            navigation={true}
-          >
-            <SwiperSlide>
-              <div className="flex flex-col items-center place-self-center">
-                <img
-                  src="/assets/bristin.jpg"
-                  width={200}
-                  height={200}
-                  alt="bristin"
-                  className="rounded-full w-[60%] mb-6"
-                />
-                <p className="text-3xl flex items-center justify-center">
-                  Bristin Borah
-                  <Link
-                    href="https://www.linkedin.com/in/bristin-borah-739b63179"
-                    target="_blank"
-                  >
-                    <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
-                  </Link>
-                </p>
-                <p className="text-xl mb-3">(Blockchain Engineer)</p>
-                <p className="text-xl">Company: Melisoft</p>
-                <p className="text-xl font-bold">CTC: 30LPA</p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="flex flex-col items-center place-self-center">
-                <img
-                  src="/assets/akash.jpeg"
-                  width={200}
-                  height={200}
-                  alt="akash"
-                  className="rounded-full w-[60%] mb-6"
-                />
-                <p className="text-3xl flex items-center justify-center">
-                  Akash Singh
-                  <Link
-                    href="https://www.linkedin.com/in/akash-singh-071850193/"
-                    target="_blank"
-                  >
-                    <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
-                  </Link>
-                </p>
-                <p className="text-xl mb-3">(Blockchain Dev)</p>
-                <p className="text-xl">Company: Impactional Games</p>
-                <p className="text-xl font-bold">Stipend: 12K</p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="flex flex-col items-center place-self-center">
-                <img
-                  src="/assets/tathagat.jpeg"
-                  width={200}
-                  height={200}
-                  alt="tathagat"
-                  className="rounded-full w-[60%] mb-6"
-                />
-                <p className="text-3xl flex items-center justify-center">
-                  Tathagat
-                  <Link
-                    href="https://www.linkedin.com/in/tathagat-926779191/"
-                    target="_blank"
-                  >
-                    <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
-                  </Link>
-                </p>
-                <p className="text-xl mb-3">(Blockchain Engineer Intern)</p>
-                <p className="text-xl">Company: Impactional Games</p>
-                <p className="text-xl font-bold">Stipend: 12K</p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="flex flex-col items-center place-self-center">
-                <img
-                  src="https://res.cloudinary.com/dtblj84n0/image/upload/v1687760763/luster%20mainsite/VigneshRajaImage_ycmbt6.png"
-                  width={200}
-                  height={200}
-                  alt="tathagat"
-                  className="rounded-full w-[60%] mb-6"
-                />
-                <p className="text-3xl flex items-center justify-center">
-                  Vignesh Raja
-                  <Link href="" target="_blank">
-                    <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
-                  </Link>
-                </p>
-                <p className="text-xl mb-3">(Blockchain Dev)</p>
-                <p className="text-xl">Company: Puffles</p>
-                <p className="text-xl font-bold">CTC:12 LPA</p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="flex flex-col items-center place-self-center">
-                <img
-                  src="https://drive.google.com/uc?id=124InUJ6mYyVgKcD4mTqWUOP4PtzB116P"
-                  width={200}
-                  height={200}
-                  alt="Shubham Garg"
-                  className="rounded-full w-[60%] mb-6"
-                />
-                <p className="text-3xl flex items-center justify-center">
-                  Shubham Garg
-                  <Link
-                    href="https://www.linkedin.com/in/shubham-garg-6232181b8/"
-                    target="_blank"
-                  >
-                    <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
-                  </Link>
-                </p>
-                <p className="text-xl mb-3">(Blockchain Dev)</p>
-                <p className="text-xl">Company: V3</p>
-                <p className="text-xl font-bold">Stipend: 20K</p>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="flex flex-col items-center place-self-center mb-12">
-                <img
-                  src="https://res.cloudinary.com/dtblj84n0/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1687764283/AbhijeetRanjanImage_zk0qa7.jpg?_s=public-apps"
-                  width={200}
-                  height={200}
-                  alt="Abijeet Ranjan"
-                  className="rounded-full w-[60%] mb-6"
-                />
-                <p className="text-3xl flex items-center justify-center">
-                  Abhijeet Ranjan
-                  <Link
-                    href="https://www.linkedin.com/in/bytecodevelocity/"
-                    target="_blank"
-                  >
-                    <AiOutlineLinkedin className="mt-1 hover:cursor-pointer ml-2" />
-                  </Link>
-                </p>
-                <p className="text-xl mb-3">(Blockchain Dev)</p>
-                <p className="text-xl">Company: Rooba FInance</p>
-                <p className="text-xl font-bold">CTC: 6 LPA</p>
-              </div>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </section> */}
-
       {/* additional info section */}
       <section className="text-center md:text-left">
         <div className="grid mt-12 grid-cols-1 px-4 md:px-0 md:grid-cols-2 min-h-[94vh]">
@@ -451,27 +289,7 @@ const AiBootcamp = () => {
               {" "}
               Educator{" "}
             </button>
-            {/* <button
-              className={`${
-                content === "Mentor" ? `${clickButton}` : `${unclickedButton}`
-              }`}
-              onClick={mentorHandler}
-            >
-              {" "}
-              Mentor{" "}
-            </button> */}
-
-            {/* <button
-              className={`${
-                content === "Placementcell"
-                  ? `${clickButton}`
-                  : `${unclickedButton}`
-              }`}
-              onClick={placementcellHandler}
-            >
-              {" "}
-              Placement Cell{" "}
-            </button> */}
+           
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center md:gap-4 font-orbitron">
@@ -572,10 +390,8 @@ const AiBootcamp = () => {
                   ₹9,999 Only for first 50 students
                 </div>
                 <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron ">
-                <span className="line-through">₹19,999</span>  onwards
+                <span className="line-through">₹19,999</span>  afterwards
                 </div>
-                {/* <p className='mt-8 text-4xl font-semibold'>EMIs option available!</p> */}
-                {/* <p className='text-[16px] md:text-[24px] my-2'><b>Upfront fee:</b> ₹40,000</p> */}
               </div>
 
               <Link
@@ -587,10 +403,6 @@ const AiBootcamp = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="mt-8 md:mt-0 md:ml-20">
-                <img src={manfee} className="h-[15rem] ml-20 md:ml-0" alt='fees' />
-            </div> */}
       </section>
 
       {/* Why to learn now? */}
@@ -778,6 +590,8 @@ const AiBootcamp = () => {
         })}
       </section>
     </main>
+    {isShow && <Timer func={setIsShow} isShow={isShow}/>}
+    </>
   );
 };
 

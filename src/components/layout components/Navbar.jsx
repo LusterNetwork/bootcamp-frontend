@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { FaBrain } from "react-icons/fa";
-import Timer from "../../pages/Timer.jsx";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
 const Header = () => {
@@ -12,10 +11,10 @@ const Header = () => {
   const gotohome = () => {
     navigate("/");
   };
+
   const toggle = () => {
     setActive(!active);
   };
-  const location=useLocation().pathname.split("/");
  
 
   return (
@@ -31,15 +30,11 @@ const Header = () => {
               LUSTER
             </h1>
           </div>
-          {location[2]=="aibootcamp" && (
-            <div className="md:ml-16">
-            <Timer />
-          </div>
-            )}
           <div>
           <div className={active ? "block" : "hidden"}>
   <div className="absolute top-[4.65rem] left-0 right-0 w-full px-2 rounded-b-md ">
-    <ul className="bg-slate-900 flex flex-col items-center text-center text-lg rounded-md transition-all ">
+    <ul className="bg-slate-900 
+    flex flex-col items-center text-center text-lg rounded-md transition-all ">
       <li className="p-1">
         <div className="flex flex-col items-center justify-between">
           <Link to="/bootcamps/ethereum" className="ml-4 flex items-center" onClick={()=>setShowOptions(!showOptions)}>
@@ -91,7 +86,7 @@ const Header = () => {
                       setTimeout(() => (window.location.href = "/#POE"), 0)
                     }
                   >
-                    POE
+                    errorOcean
                   </Link>
                 </li>
                 <li className="group relative">
