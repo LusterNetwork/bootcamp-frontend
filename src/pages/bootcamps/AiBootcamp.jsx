@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { AiCurriculum } from "../../components/bootcamp components";
 import { Link } from "react-router-dom";
 import {
@@ -32,6 +32,14 @@ const AiBootcamp = () => {
   );
   const[isShow,setIsShow]=useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsShow(true);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const educatorHandler = () => {
     setContent("Educator");
     setSource("/assets/backbone/educator.jpg");
@@ -62,7 +70,6 @@ const AiBootcamp = () => {
           <div className="flex flex-col mb-4 md:my-10 md:flex-row">
             <p className="text-[#006DF6] m-0 text-[55px] text-center font-bold">
               <span 
-                onMouseEnter={handleTypedMouseEnter}
               className="text-5xl md:text-7xl text-neutral-100 m-0 font-piazzolla tracking-wide">
                 <Typed
                   strings={["Artificial Intelligence Bootcamp"]}
@@ -379,13 +386,18 @@ const AiBootcamp = () => {
       </section>
 
       {/* fees section */}
-      <section className="flex flex-col py-12 md:mt-12 text-center md:min-h-[94vh] justify-center items-center">
+      <section 
+       className="flex flex-col py-12 md:mt-12 text-center md:min-h-[94vh] justify-center items-center">
         <p className="text-4xl md:text-6xl font-bruno">Fees Structure</p>
 
         <div className="flex flex-wrap justify-between mt-16 items-center px-[10%]">
           <div className="flex flex-col items-center">
-            <div className="flex flex-col gap-12 my-15 items-center justify-center">
-              <div className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
+            <div
+             className="flex flex-col gap-12 my-15 items-center justify-center">
+              <div
+               onMouseEnter={handleTypedMouseEnter}
+               onTouchStart={handleTypedMouseEnter}
+               className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
                 <div className="text-3xl md:text-5xl font-bold mb-1 font-orbitron">
                   ₹9,999 Only for first 50 students
                 </div>
