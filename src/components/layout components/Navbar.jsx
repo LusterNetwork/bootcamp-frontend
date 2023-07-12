@@ -19,37 +19,44 @@ const Header = () => {
  
  const handleOptionClick = () => {
     setShowOptions(false);
+    setActive(false); // Hide the navbar on mobile screens
   };
 
   return (
     <>
       <nav className="w-[100%] z-50 top-0 shadow-md bg-neutral-900 bg-opacity-70 backdrop-blur-xl fixed text-[20px]">
         <div className="py-1 sm:px-5 flex flex-row items-center justify-between px-3 md:px-24 m-auto">
-          <div
-            onClick={gotohome}
+          <Link to="/"
+              onClick={handleOptionClick}
             className="cursor-pointer flex items-center gap-2"
           >
-            <img src="/assets/logo.png" height={50} width={50} />{" "}
+            <img src="/assets/logo.png" height={50} width={50} />
             <h1 className="font-semibold italic text-2xl hidden md:block">
               LUSTER
             </h1>
-          </div>
+          </Link>
           <div>
           <div className={active ? "block" : "hidden"}>
-  <div className="absolute top-[4.65rem] left-0 right-0 w-full px-2 rounded-b-md ">
+  <div className="absolute top-[3.6rem] left-0 right-0 w-full px-2 rounded-b-md ">
     <ul className="bg-slate-900 
     flex flex-col items-center text-center text-lg rounded-md transition-all ">
+     <li className="pt-2 cursor-pointer">
+    <Link to="/" className="" onClick={handleOptionClick}>
+      errorOcean
+    </Link>
+  </li>
       <li className="p-1">
         <div className="flex flex-col items-center justify-between">
-          <Link to="/bootcamps/ethereum" className="ml-4 flex items-center" onClick={()=>setShowOptions(!showOptions)}>
+          <div className="ml-4 flex items-center" onClick={()=>setShowOptions(!showOptions)}>
             Bootcamp
             <RiArrowDropDownLine className="ml-1 mt-1.5" />
-          </Link>
+          </div>
           <ul  className={`${showOptions ? "block" : "hidden"} text-center`}>
             <li className="p-1">
               <Link
                 to="/bootcamps/ethereum"
                 className="block px-4 py-2 hover:bg-black hover:text-white"
+                onClick={handleOptionClick}
               >
               Ethereum
               </Link>
@@ -58,6 +65,7 @@ const Header = () => {
               <Link
                 to="/bootcamps/aibootcamp"
                 className="block px-4 py-2 hover:bg-black hover:text-white"
+                onClick={handleOptionClick}
               >
                Artificial Intelligence
               </Link>
@@ -66,7 +74,8 @@ const Header = () => {
         </div>
       </li>
       <li className="p-1 cursor-pointer">
-        <Link href="/aboutus" className="">
+        <Link to="/aboutus" className=""
+                onClick={handleOptionClick}>
           About us
         </Link>
       </li>
@@ -84,14 +93,14 @@ const Header = () => {
 
               <ul className="flex items-center gap-8">
                 <li className="cursor-pointer hover:underline transition-all">
-                  <Link
-                    to="/"
-                    onClick={() =>
-                      setTimeout(() => (window.location.href = "/#POE"), 0)
-                    }
-                  >
-                    errorOcean
-                  </Link>
+                    <Link
+                      to="/"
+                      onClick={() =>
+                        setTimeout(() => (window.location.href = "/#POE"), 0)
+                      }
+                    >
+                      errorOcean
+                    </Link>
                 </li>
                 <li
       className=""
