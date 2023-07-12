@@ -51,7 +51,7 @@ const Timer = ({ isShow, func }) => {
       className="h-3/4  brightness-110"
     /> */}
    
-    <div className="animate-slide-down mx-2 md:mx-0 bg-white shadow-xl rounded-md px-6 md:px-10 py-12 text-black relative">
+    <div className="animate-slide-down text-center mx-2 md:mx-0 bg-white shadow-xl rounded-md px-6 md:px-10 py-12 text-black relative">
     <button
       className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
       onClick={() => func(!isShow)}
