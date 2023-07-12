@@ -8,6 +8,7 @@ const Header = () => {
   const [color, setColor] = useState(false);
   const [active, setActive] = useState(false);
   const[showOptions,setShowOptions]=useState(false);
+
   const gotohome = () => {
     navigate("/");
   };
@@ -16,6 +17,9 @@ const Header = () => {
     setActive(!active);
   };
  
+ const handleOptionClick = () => {
+    setShowOptions(false);
+  };
 
   return (
     <>
@@ -89,31 +93,36 @@ const Header = () => {
                     errorOcean
                   </Link>
                 </li>
-                <li className="group relative">
-                  <p className="cursor-pointer flex items-center transition-all hover:underline-offset-4">
-                    Bootcamp <RiArrowDropDownLine />
-                  </p>
-                  <ul className="hidden group-hover:block absolute mt-2 bg-white text-black">
-                    <li className="">
-                      <Link
-                        to="/bootcamps/ethereum"
-                        className="block px-4 py-2 hover:bg-black hover:text-white"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        Ethereum
-                      </Link>
-                    </li>
-                    <li className="">
-                      <Link
-                        to="/bootcamps/aibootcamp"
-                        className="block px-4 py-2 hover:bg-black hover:text-white"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        AI
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                <li
+      className=""
+      onMouseEnter={() => setShowOptions(true)}
+    >
+      <p className="cursor-pointer flex items-center transition-all hover:underline-offset-4">
+        Bootcamp <RiArrowDropDownLine />
+      </p>
+      {showOptions && (
+        <ul className="block absolute mt-2 bg-white text-black" onMouseLeave={() => setShowOptions(false)}>
+          <li>
+            <Link
+              to="/bootcamps/ethereum"
+              className="block px-4 py-2 hover:bg-black hover:text-white"
+              onClick={handleOptionClick}
+            >
+              Ethereum
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/bootcamps/aibootcamp"
+              className="block px-4 py-2 hover:bg-black hover:text-white"
+              onClick={handleOptionClick}
+            >
+              AI
+            </Link>
+          </li>
+        </ul>
+      )}
+    </li>
 
                 <li className="cursor-pointer  hover:underline transition-all hover:underline-offset-4">
                   <Link to="/aboutus" className="">

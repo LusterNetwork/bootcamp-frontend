@@ -30,7 +30,7 @@ const AiBootcamp = () => {
   const [Linkedin, setLinkedin] = useState(
     "https://www.linkedin.com/in/kajal-singh-3527a742"
   );
-  const[isShow,setIsShow]=useState(false);
+  const[isShow,setIsShow]=useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
