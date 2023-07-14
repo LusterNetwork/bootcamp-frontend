@@ -118,7 +118,10 @@ const Home = () => {
       </div>
       {/* POE section */}
 
-      <section id="POE" className="p-4 md:p-12 flex justify-center items-center">
+      <section
+        id="POE"
+        className="p-4 md:p-12 flex justify-center items-center"
+      >
         <div
           className="box-content flex flex-col justify-center shadow-xl
    bg-black hover:border-2 border-white rounded-md md:w-[70%] lg:w-[70%] xl:w-[70%] sm:w-[100%] "
@@ -162,32 +165,46 @@ const Home = () => {
         <div className="box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF] rounded-md">
           <p className="text-5xl mt-24 md:text-7xl font-semibold">Bootcamps</p>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-6 py-16 mb-24">
-            <div className="flex flex-col md:flex-row justify-evenly items-center md:items-center 
+            <div
+              className="flex flex-col md:flex-row justify-evenly items-center md:items-center 
              p-4  rounded-3xl 
-          ">
-              <Link to="/bootcamps/ethereum" className="mb-10 md:mb-0 bg-black hover:cursor-pointer 
-             animate-pulse hover:animate-none 
-            hover:scale-125 transition-all py-8">
+          "
+            >
+              <Link
+                to="/bootcamps/ethereum"
+                className="mb-10 md:mb-0 bg-black hover:cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all py-8"
+                style={{
+                  transitionDuration: "0.3s",
+                  transitionTimingFunction: "ease-in-out",
+                }}
+              >
                 <img
                   src="/assets/ethereum.png"
                   alt="ethereum"
                   width={200}
                   height={200}
                   className="w-[80%] mx-auto "
+                  style={{ transitionProperty: "transform" }}
                 />
                 <p className="text-4xl font-semibold">Ethereum</p>
                 <p className="text-2xl font-semibold">(click to explore)</p>
               </Link>
 
-              <Link to="/bootcamps/aibootcamp" className="bg-black hover:cursor-pointer 
-             animate-pulse hover:animate-none 
-            hover:scale-125 transition-all py-8">
+              <Link
+                to="/bootcamps/aibootcamp"
+                className="mb-10 md:mb-0 bg-black hover:cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all py-8"
+                style={{
+                  transitionDuration: "0.3s",
+                  transitionTimingFunction: "ease-in-out",
+                }}
+              >
                 <img
-                  src="/assets/ethereum.png"
+                  src="/assets/aihome.png"
                   alt="ethereum"
                   width={200}
                   height={200}
                   className="w-[80%] mx-auto"
+                  style={{ transitionProperty: "transform" }}
                 />
                 <p className="text-4xl font-semibold">AI</p>
                 <p className="text-2xl font-semibold">(click to explore)</p>

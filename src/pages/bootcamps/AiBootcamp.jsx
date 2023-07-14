@@ -127,7 +127,7 @@ const AiBootcamp = () => {
         </div>
 
         <div className="flex flex-col border-3 items-center text-center justify-center md:mb-16 py-12">
-          <p className="font-bold text-3  xl md:text-5xl font-bruno">
+          <p className="font-bold text-3xl md:text-5xl font-bruno">
             Connect for free consultation
           </p>
           <p className="text-2xl my-8 font-orbitron">
@@ -419,7 +419,7 @@ const AiBootcamp = () => {
 
       {/* Why to learn now? */}
       <section class="flex flex-col items-center justify-center bg-gray-100 rounded-lg p-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-  <h2 class="text-4xl font-bold mb-8 text-black font-bruno">
+  <h2 class="text-4xl text-center font-bold mb-8 text-black font-bruno">
     Why Learn AI/ML Now?
   </h2>
   <div class="flex items-center text-lg font-medium font-orbitron space-x-2 text-gray-900 mb-6">
@@ -461,8 +461,6 @@ const AiBootcamp = () => {
     Register Now
   </a>
 </section>
-
-
       <div className="text-center md:mt-16 py-12 px-4 md:px-24 text-white font-orbitron">
         <h2 className="text-4xl font-bold text-gray-200 mb-8 leading-relaxed">
           Unleash the Power of AI/ML for Unmatched Competitive Advantage
