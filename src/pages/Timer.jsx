@@ -94,7 +94,7 @@ const Timer = ({ isShow, func }) => {
             Limited Time Offer
           </p>
           <Link
-            to="/register"
+            to="https://bit.ly/3Y7wbAb"
             className="h-10 md:h-12 mt-2 px-6 md:px-8 font-bold text-base md:text-xl flex items-center justify-center
           rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors 
           hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
