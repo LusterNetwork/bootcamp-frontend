@@ -6,9 +6,9 @@ import Contact from "./Contact";
 import DCMA from "./DCMA";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
-
+import Timer from "./Timer";
 //pages importing for "/bootcamps"
-import { Ethereum } from "./bootcamps";
+import { Ethereum,AiBootcamp } from "./bootcamps";
 
 export {
     Home,
@@ -18,5 +18,7 @@ export {
     DCMA,
     Privacy,
     Terms,
-    Ethereum
+    Ethereum,
+    AiBootcamp,
+    Timer,
 }

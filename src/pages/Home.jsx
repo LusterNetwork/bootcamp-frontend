@@ -118,7 +118,10 @@ const Home = () => {
       </div>
       {/* POE section */}
 
-      <section id="POE" className="p-4 md:p-12 flex justify-center items-center">
+      <section
+        id="POE"
+        className="p-4 md:p-12 flex justify-center items-center"
+      >
         <div
           className="box-content flex flex-col justify-center shadow-xl
    bg-black hover:border-2 border-white rounded-md md:w-[70%] lg:w-[70%] xl:w-[70%] sm:w-[100%] "
@@ -148,7 +151,7 @@ const Home = () => {
           </p>
           <div className="flex justify-end mx-8 my-4">
             <Link
-              to="https://poc.luster.network/"
+              to="https://errorocean.luster.network/"
               className="h-[4rem] text-2xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[10rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               Check Out
@@ -162,16 +165,48 @@ const Home = () => {
         <div className="box-content bg-gradient-to-r text-center flex flex-col justify-center from-[#9374DC] to-[#58AFEF] rounded-md">
           <p className="text-5xl mt-24 md:text-7xl font-semibold">Bootcamps</p>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-6 py-16 mb-24">
-            <div className="bg-black flex flex-col items-center col-span-1 p-4 place-self-center rounded-3xl hover:cursor-pointer  md:w-[20%] animate-pulse hover:animate-none hover:scale-125 transition-all">
-              <Link to="/bootcamps/ethereum">
+            <div
+              className="flex flex-col md:flex-row justify-evenly items-center md:items-center 
+             p-4  rounded-3xl 
+          "
+            >
+              <Link
+                to="/bootcamps/ethereum"
+                className="mb-10 md:mb-0 bg-black hover:cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all py-8"
+                style={{
+                  transitionDuration: "0.3s",
+                  transitionTimingFunction: "ease-in-out",
+                }}
+              >
                 <img
                   src="/assets/ethereum.png"
                   alt="ethereum"
                   width={200}
                   height={200}
-                  className="w-[80%] mx-auto"
+                  className="w-[80%] mx-auto "
+                  style={{ transitionProperty: "transform" }}
                 />
                 <p className="text-4xl font-semibold">Ethereum</p>
+                <p className="text-2xl font-semibold">(click to explore)</p>
+              </Link>
+
+              <Link
+                to="/bootcamps/aibootcamp"
+                className="mb-10 md:mb-0 bg-black hover:cursor-pointer animate-pulse hover:animate-none hover:scale-125 transition-all py-8"
+                style={{
+                  transitionDuration: "0.3s",
+                  transitionTimingFunction: "ease-in-out",
+                }}
+              >
+                <img
+                  src="/assets/aihome.png"
+                  alt="ethereum"
+                  width={200}
+                  height={200}
+                  className="w-[80%] mx-auto"
+                  style={{ transitionProperty: "transform" }}
+                />
+                <p className="text-4xl font-semibold">AI</p>
                 <p className="text-2xl font-semibold">(click to explore)</p>
               </Link>
             </div>
@@ -294,7 +329,7 @@ const Home = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={i}>
-                <div className="flex flex-col p-8 items-center bg-black rounded-md mb-10">
+                <div className="flex flex-col p-8 items-center  bg-gradient-to-bl from-gray-700 via-gray-900 to-black rounded-md mb-10">
                   <picture className="flex items-center justify-center">
                     <img
                       src={person.image}
@@ -324,7 +359,7 @@ const Home = () => {
           >
             {reviews.map((person, i) => (
               <SwiperSlide key={person.name}>
-                <div className="flex h-[30rem] flex-col p-8 items-center w-[28rem] bg-black shadow-md rounded-3xl justify-center m-20 mx-auto">
+                <div className="flex h-[30rem] flex-col p-8 items-center w-[28rem]  bg-gradient-to-bl from-gray-700 via-gray-900 to-black shadow-md rounded-3xl justify-center m-20 mx-auto">
                   <picture>
                     <img
                       src={person.image}
@@ -344,7 +379,7 @@ const Home = () => {
       {/* partners section */}
       <section className="flex flex-col items-center justify-center my-5 mt-[8rem]">
         <p className="text-center text-xl md:text-5xl font-semibold mb-[2.5rem]">
-          Our Partners
+          Our Education Partners
         </p>
         <section className="flex flex-wrap justify-center gap-6 w-[75%] mx-auto">
           <article>
@@ -376,6 +411,12 @@ const Home = () => {
             <img src="/assets/bananasdk.jpeg" height={90} width={90} />
             <h1 className="font-semibold text-3xl text-yellow-300">
               Banana SDK
+            </h1>
+          </article>
+          <article className="flex gap-4 items-center">
+            <img src="/assets/karan_logo_5.png" height={90} width={90} />
+            <h1 className="font-semibold text-3xl text-sky-300">
+              The Blockchain Hive
             </h1>
           </article>
         </section>

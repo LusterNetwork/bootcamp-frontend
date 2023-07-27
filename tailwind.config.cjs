@@ -12,7 +12,11 @@ module.exports = {
         'cta-pattern': "url('/assets/cta-mask.png')",
       },
       fontFamily: {
-        manrope: ['"Manrope"', ...defaultTheme.fontFamily.sans]
+        manrope: ['"Manrope"', ...defaultTheme.fontFamily.sans],
+        vt323:['"VT323"', ...defaultTheme.fontFamily.sans],
+        orbitron:['"Orbitron"', ...defaultTheme.fontFamily.sans],
+        bruno:['"Bruno Ace SC"', ...defaultTheme.fontFamily.sans],
+        piazzolla:['"Piazzolla"', ...defaultTheme.fontFamily.sans],
       }
     },
   },
