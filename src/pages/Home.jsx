@@ -151,7 +151,7 @@ const Home = () => {
           </p>
           <div className="flex justify-end mx-8 my-4">
             <Link
-              to="https://errorocean.luster.network/"
+              to="https://errorocean.luster.network/user/feeds"
               className="h-[4rem] text-2xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[10rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               Check Out
