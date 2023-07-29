@@ -11,10 +11,10 @@ export const faqs = [
         ques:"How will the placement cell help me get a job?",
         ans:"CryptoNaukri is collaborating with Indian and International web3 startups and good paying web3 IT Consultancy firms."
     },
-    {
-        ques:"What will be the frequency of 1 on 1 sessions with a mentor?",
-        ans:"You can schedule a 1-on-1 session with Mentor anytime during weekdays."
-    },
+    // {
+    //     ques:"What will be the frequency of 1 on 1 sessions with a mentor?",
+    //     ans:"You can schedule a 1-on-1 session with Mentor anytime during weekdays."
+    // },
     {
         ques:"What is the role of the mentor?",
         ans:"Mentor will help you in completing 8 projects, doubt solving, interview preparation and career guidance."
