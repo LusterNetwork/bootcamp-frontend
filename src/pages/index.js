@@ -9,6 +9,7 @@ import Terms from "./Terms";
 import Timer from "./Timer";
 //pages importing for "/bootcamps"
 import { Ethereum,AiBootcamp } from "./bootcamps";
+import AiRegistration from "./aiRegistration";
 
 export {
     Home,
@@ -21,4 +22,5 @@ export {
     Ethereum,
     AiBootcamp,
     Timer,
+    AiRegistration
 }

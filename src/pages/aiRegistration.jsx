@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Registeration_Modal from "./Registeration_Modal";
 import { useNavigate } from "react-router-dom";
-import { registerStudents } from "../services/api";
+import { payApi, registerStudents } from "../services/api";
+import { v4 as uuidv4 } from 'uuid';
 
-const Register = () => {
+const AiRegistration = () => {
   const [user, setUser] = useState({
     name: "",
     phone_no: "",
@@ -15,6 +16,23 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const[isOpen,setIsOpen] = useState(false);
   const history = useNavigate();
+
+  function generateMerchantTransactionId() {
+    const maxLength = 30;
+  
+    // Get the current timestamp in milliseconds
+    const timestamp = Date.now().toString();
+  
+    // Generate a UUID
+    const uuid = uuidv4().replace(/-/g, "");
+  
+    // Combine the timestamp and UUID to create the unique ID
+    const merchantTransactionId = `TXN_${timestamp}${uuid}`.slice(0, maxLength);
+  
+    return merchantTransactionId;
+  }
+
+  const generatedId = "TXN_" + generateMerchantTransactionId();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,27 +68,27 @@ const Register = () => {
 
     setLoading(true);
     sendRequest();
-    
   };
 
   const sendRequest=async()=>{
     try{
    const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
     setLoading(false);
-    history("/");
+    const res2=await payApi(generatedId,200,user.phone_no,user.email,user.bootcamp);
+    console.log(res2);
+    // history("/");
     } catch (error) {
       console.log(error)
     setLoading(false);
     }
   }
 
-
   return (
     <>
       <div className="pt-16 w-full text-[14px]">
         <div className="w-full flex flex-col items-center justify-center py-12 ">
           <h1 className="text-3xl md:text-5xl px-3 mt-3 text-center font-semibold mb-2">
-            Register now for web3 Bootcamp
+            Register for AI Bootcamp
           </h1>
           <h1 className="text-3xl md:text-5xl px-3 text-center font-semibold mb-2"></h1>
           <div className=" mt-8 rounded-2xl">
@@ -150,7 +168,6 @@ const Register = () => {
                     className=" bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
                   >
                     <option value="Select bootcamp">Select bootcamp</option>
-                    <option value="Ethereum">Ethereum</option>
                     <option value="AI">Artificial Intelligence</option>
                   </select>
                 </div>
@@ -172,9 +189,9 @@ const Register = () => {
                   disabled={!user.bootcamp}
                   type="submit"
                   onClick={handleSubmit}
-                  className="mx-auto bg-gradient-to-r from-indigo-600 to-blue-600 px-[3rem] py-[0.5rem] rounded-md shadow-md md:text-[16px]"
+                  className="cursor-pointer mx-auto bg-gradient-to-r from-indigo-600 to-blue-600 px-[3rem] py-[0.5rem] rounded-md shadow-md md:text-[16px]"
                 >
-                  {loading ? "Loading..." : "SUBMIT"}
+                  {loading ? "Loading..." : "PAY NOW"}
                 </button>
               </form>
             </div>
@@ -185,4 +202,4 @@ const Register = () => {
     </>
   );
 };
-export default Register;
+export default AiRegistration;

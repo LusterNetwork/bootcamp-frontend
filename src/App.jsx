@@ -9,7 +9,8 @@ import {
   Privacy,
   Terms,
   Ethereum,
-  AiBootcamp
+  AiBootcamp,
+  AiRegistration
 } from "./pages";
 import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/refund" element={<Refund />} />
           <Route path="/paytm" element={<Paytm />} /> {/* Added a missing slash before "paytm" */}
           <Route path="/terms" element={<Terms />} />
+          <Route path="/airegistration" element={<AiRegistration />} />
           <Route path="/bootcamps">
             <Route path="ethereum" element={<Ethereum />} /> {/* Added a missing slash before "ethereum" */}
             <Route path="aibootcamp" element={<AiBootcamp />} /> {/* Added a missing slash before "aibootcamp" */}
