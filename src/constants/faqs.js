@@ -17,7 +17,7 @@ export const faqs = [
     // },
     {
         ques:"What is the role of the mentor?",
-        ans:"Mentor will help you in completing 8 projects, doubt solving, interview preparation and career guidance."
+        ans:"Mentor will be conducting live training and project development classes."
     },
     {
         ques:"What are the prerequisites of the bootcamp?",
