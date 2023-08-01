@@ -10,15 +10,15 @@ import {
   Terms,
   Ethereum,
   AiBootcamp,
-  AiRegistration
+  AiRegistration,
+  PaymentButton,
+  RedirectPage,
 } from "./pages";
 import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
 import ExcelDownload from "./pages/ExcelDownload";
 import Paytm from "./pages/Paytm";
 import Quiz from "./pages/Quiz/Quiz";
-import PaymentButton from "./pages/PaymentButton";
-import RedirectPage from "./pages/RedirectPage";
 
 const App = () => {
   return (

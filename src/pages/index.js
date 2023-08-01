@@ -10,6 +10,8 @@ import Timer from "./Timer";
 //pages importing for "/bootcamps"
 import { Ethereum,AiBootcamp } from "./bootcamps";
 import AiRegistration from "./aiRegistration";
+import PaymentButton from "./PaymentButton";
+import RedirectPage from "./RedirectPage";
 
 export {
     Home,
@@ -22,5 +24,7 @@ export {
     Ethereum,
     AiBootcamp,
     Timer,
-    AiRegistration
+    AiRegistration,
+    RedirectPage,
+    PaymentButton,
 }
