@@ -35,9 +35,8 @@ const RedirectPage = () => {
   }, [redirectUrl]);
 
   return (
-    <div>
+    <div className='flex justify-center items-center h-screen'>
       <p>Redirecting...</p>
-      {/* You can show a loader or any other message while redirecting */}
     </div>
   );
 };
