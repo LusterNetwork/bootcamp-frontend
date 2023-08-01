@@ -53,6 +53,7 @@ const AiRegistration = () => {
     sendRequest();
   };
 
+  
   const sendRequest=async()=>{
     try{
    const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
@@ -63,6 +64,9 @@ const AiRegistration = () => {
     setLoading(false);
     }
   }
+
+  //amount, bootcamp name, transactionId
+  // mention amount, change button text
 
   return (
     <>
