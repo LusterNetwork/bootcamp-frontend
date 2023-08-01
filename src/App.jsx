@@ -17,6 +17,8 @@ import Refund from "./pages/Refund";
 import ExcelDownload from "./pages/ExcelDownload";
 import Paytm from "./pages/Paytm";
 import Quiz from "./pages/Quiz/Quiz";
+import PaymentButton from "./pages/PaymentButton";
+import RedirectPage from "./pages/RedirectPage";
 
 const App = () => {
   return (
@@ -36,6 +38,8 @@ const App = () => {
           <Route path="/paytm" element={<Paytm />} /> {/* Added a missing slash before "paytm" */}
           <Route path="/terms" element={<Terms />} />
           <Route path="/airegistration" element={<AiRegistration />} />
+          <Route path="/paymentbutton" element={<PaymentButton />} />
+          <Route path="/redirectpage" element={<RedirectPage />} />
           <Route path="/bootcamps">
             <Route path="ethereum" element={<Ethereum />} /> {/* Added a missing slash before "ethereum" */}
             <Route path="aibootcamp" element={<AiBootcamp />} /> {/* Added a missing slash before "aibootcamp" */}
