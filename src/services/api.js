@@ -33,7 +33,7 @@ export const payApi= async(generatedId)=>{
 //   // Append the queryString to the URL
 //   const url = `${BASE_URL}/endpoint?${queryString}`;
     try {
-        const response = await axios.get(BASE_URL+`/pay?merchantTransactionIdFrontend=${generatedId}`,{
+        const response = await axios.get(`https://mainsite-backend.onrender.com/pay?merchantTransactionIdFrontend=${generatedId}`,{
         })
         return response.request.responseURL;
     } catch (error) {
