@@ -5,7 +5,7 @@ export const faqs = [
     },
     {
         ques:"How will my doubts get solved?",
-        ans:"2 hours of live doubt solving with Mentor, everyday."
+        ans:"2 hours of Live classes on Weekends. You can clear your doubts there."
     },
     {
         ques:"How will the placement cell help me get a job?",
