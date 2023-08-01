@@ -17,23 +17,6 @@ const AiRegistration = () => {
   const[isOpen,setIsOpen] = useState(false);
   const history = useNavigate();
 
-  function generateMerchantTransactionId() {
-    const maxLength = 30;
-  
-    // Get the current timestamp in milliseconds
-    const timestamp = Date.now().toString();
-  
-    // Generate a UUID
-    const uuid = uuidv4().replace(/-/g, "");
-  
-    // Combine the timestamp and UUID to create the unique ID
-    const merchantTransactionId = `TXN_${timestamp}${uuid}`.slice(0, maxLength);
-  
-    return merchantTransactionId;
-  }
-
-  const generatedId = "TXN_" + generateMerchantTransactionId();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Regular expressions for email and phone number format
@@ -74,9 +57,7 @@ const AiRegistration = () => {
     try{
    const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
     setLoading(false);
-    const res2=await payApi(generatedId,200,user.phone_no,user.email,user.bootcamp);
-    console.log(res2);
-    // history("/");
+    history("/paymentbutton");
     } catch (error) {
       console.log(error)
     setLoading(false);
