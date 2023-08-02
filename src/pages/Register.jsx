@@ -56,6 +56,11 @@ const Register = () => {
   const sendRequest=async()=>{
     try{
    const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+   if(res?.success===false){
+    alert("Duplicate Email address")
+    setLoading(false);c
+    return;
+  }
     setLoading(false);
     history("/");
     } catch (error) {

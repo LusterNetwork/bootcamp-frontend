@@ -31,6 +31,7 @@ const AiBootcamp = () => {
     "https://www.linkedin.com/in/kajal-singh-3527a742"
   );
   const[isShow,setIsShow]=useState(true);
+  const [isMouseHover, setIsMouseHover] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -53,14 +54,12 @@ const AiBootcamp = () => {
     "border p-3 rounded-xl font-semibold md:text-2xl my-2 hover:bg-gray-800 mx-2 md:mx-8";
 
     const handleTypedMouseEnter = () => {
-      if (!isShow) {
+      if (!isShow && !isMouseHover) {
         setIsShow(true);
+        setIsMouseHover(true)
       }
     };
     
-
-    console.log(isShow);
-
   return (
     <>
     <main className="md:w-[90%] mx-auto">

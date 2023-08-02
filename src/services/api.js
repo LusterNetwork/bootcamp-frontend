@@ -19,7 +19,7 @@ export const registerStudents=async(name,email,phone_no,experience,bootcamp,coup
     }
 }
 
-export const payApi= async(generatedId)=>{
+export const payApi= async(generatedId,mobileNumber)=>{
       
       // Your secret key for generating digital signature
 //       const secretKey = 'your_secret_key_here';
@@ -32,13 +32,18 @@ export const payApi= async(generatedId)=>{
 
 //   // Append the queryString to the URL
 //   const url = `${BASE_URL}/endpoint?${queryString}`;
-    try {
-        const response = await axios.get(BASE_URL+`/pay?merchantTransactionIdFrontend=${generatedId}`,{
-        })
-        return response.request.responseURL;
-    } catch (error) {
-        console.log(error);
-    }
+try {
+    const response = await axios.get(`${BASE_URL}/pay`, {
+      params: {
+        merchantTransactionIdFrontend: generatedId,
+        mobileNumber: mobileNumber,
+        amount:4999,
+      },
+    });
+    return response.request.responseURL;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export const checkResponseStatus= async(generatedId)=>{
