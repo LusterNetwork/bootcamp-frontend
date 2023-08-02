@@ -18,8 +18,12 @@ const PaymentButton = () => {
   const mobileNumber= location?.state?.mobileNumber
 
   useEffect(()=>{
+    if(mobileNumber)
     handleInitiatePayment();
-  },[])
+    else {
+      navigate("/airegistration")
+    }
+  },[mobileNumber])
 
   const handleInitiatePayment = async () => {
     try {
