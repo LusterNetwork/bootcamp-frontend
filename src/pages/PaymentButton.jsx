@@ -46,7 +46,7 @@ const PaymentButton = () => {
   hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
 >
   <div>Make Payment</div>
-  <div className="text-lg font-bold">Rs. 4,999</div>
+  <div className="text-lg font-bold">Rs. 9,999</div>
 </button>
 
           </a>
