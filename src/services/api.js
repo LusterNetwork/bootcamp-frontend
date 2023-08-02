@@ -37,10 +37,10 @@ try {
       params: {
         merchantTransactionIdFrontend: generatedId,
         mobileNumber: mobileNumber,
-        amount:4999,
+        amount:100,
       },
     });
-    return response.request.responseURL;
+    return response?.data;
   } catch (error) {
     console.log(error);
   }

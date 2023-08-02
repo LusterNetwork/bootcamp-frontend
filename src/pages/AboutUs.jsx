@@ -1,5 +1,6 @@
 import React from "react";
 import about from "../../public/assets/about.jpg";
+import { Link } from "react-router-dom";
 
 const AboutUS = () => {
   return (
@@ -12,22 +13,29 @@ const AboutUS = () => {
           <div className="text-2xl font-bold tracking-wider underline underline-offset-4">
             About Us
           </div>
-          <div className="mt-5 text-lg ">
+          <div className="mt-5 text-lg">
             <p>
-              Luster upskills web3 enthusiasts to web3 developers by conducting
-              cohort-based live learning bootcamps on Ethereum, Solana,
-              Hyperledger and Smart Contract auditing, etc.
+            Luster is a tokenized talent marketplace for emerging technologies like AI/ML, Blockchain, Metaverse, Cyber Security, etc.
             </p>
-            <p className="my-4">
-              If you have any query regrading Site, Advertisement and any other
-              issue, please feel free to contact at{" "}
-              <b className="tracking-wider text-cyan-600">
-                support@cryptonaukri.com
-              </b>
-            </p>
-
+           <p className="my-4">
+           We have reduced 12-month learning to just 2-month and 2-month hiring to just 1-week through our unique learning and hiring process.
+           </p>
+           <p className="my-4">
+           We conduct live certification courses on AI/ML, Blockchain. We will be adding other courses very soon
+           </p>
+           <Link to="/bootcamps/ethereum">
+           <p className="my-4 text-blue-500 font-semibold">
+           Ethereum Bootcamp
+           </p>
+           </Link>
+           <Link to="/bootcamps/aibootcamp">
+           <p className="my-4 text-blue-500 font-semibold">AI/ML Bootcamp</p>
+           </Link>
+           <p>
+           Whether you are a student, working professional or any IT business, you can connect with us to know about our services.
+           </p>
             <p>
-              Address - Ramnagar Bondegaon, Bramhapuri, Tah. Bramhapuri - 441206
+You can directly reach out at ceo@luster.network or call at 8788305490.
             </p>
           </div>
         </div>
