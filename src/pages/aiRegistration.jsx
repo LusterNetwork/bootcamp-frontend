@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import Registeration_Modal from "./Registeration_Modal";
 import { useNavigate } from "react-router-dom";
-import { payApi, registerStudents } from "../services/api";
-import { v4 as uuidv4 } from 'uuid';
+import { registerStudents } from "../services/api";
 
 const AiRegistration = () => {
   const [user, setUser] = useState({
@@ -14,7 +12,6 @@ const AiRegistration = () => {
     bootcamp: "",
   });
   const [loading, setLoading] = useState(false);
-  const[isOpen,setIsOpen] = useState(false);
   const history = useNavigate();
 
   const handleSubmit = (e) => {
@@ -26,47 +23,56 @@ const AiRegistration = () => {
     const errors = {};
 
     if (!user.name) {
-      errors.name = "Please enter your name";
+      alert("Please enter your name");
+      return ;
     }
 
     if (!user.email) {
-      errors.email = "Please enter your email address";
+      alert("Please enter your email address");
+      return ;
     } else if (!emailRegex.test(user.email)) {
-      errors.email = "Please enter a valid email address";
+      alert("Please enter a valid email address");
+      return ;
     }
 
     if (!user.phone_no) {
-      errors.phone_no = "Please enter your phone number";
+      alert("Please enter your phone number");
+      return ;
     } else if (!phoneRegex.test(user.phone_no)) {
-      errors.phone_no = "Please enter a valid 10-digit phone number";
+      alert("Please enter a valid 10-digit phone number");
+      return ;
     }
 
     if (!user.experience) {
-      errors.experience = "Please select your experience level";
+      alert("Please select your experience level");
+      return ;
     }
 
     if (!user.bootcamp) {
-      errors.bootcamp = "Please select your bootcamp preference";
+  alert("Please select your bootcamp preference");
+      return ;
     }
 
+    if(user.name && user.email && user.phone_no && user.experience && user.bootcamp){
     setLoading(true);
     sendRequest();
+    }
   };
 
   
   const sendRequest=async()=>{
     try{
-   const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+   await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
     setLoading(false);
-    history("/paymentbutton");
+    const data = {
+      mobileNumber:user.phone_no,
+    }
+    history("/paymentbutton",{state:data});
     } catch (error) {
       console.log(error)
     setLoading(false);
     }
   }
-
-  //amount, bootcamp name, transactionId
-  // mention amount, change button text
 
   return (
     <>
@@ -171,7 +177,6 @@ const AiRegistration = () => {
                 </div>
 
                 <button
-                  disabled={!user.bootcamp}
                   type="submit"
                   onClick={handleSubmit}
                   className="cursor-pointer mx-auto bg-gradient-to-r from-indigo-600 to-blue-600 px-[3rem] py-[0.5rem] rounded-md shadow-md md:text-[16px]"
@@ -183,7 +188,6 @@ const AiRegistration = () => {
           </div>
         </div>
       </div>
-      {isOpen && <Registeration_Modal/>}
     </>
   );
 };
