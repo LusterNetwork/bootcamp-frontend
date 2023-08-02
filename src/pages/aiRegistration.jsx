@@ -61,12 +61,17 @@ const AiRegistration = () => {
 
   
   const sendRequest=async()=>{
-    try{
-   await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
-    setLoading(false);
     const data = {
       mobileNumber:user.phone_no,
     }
+    try{
+      const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+      if(res?.success===false){
+        alert("Duplicate Email address")
+    setLoading(false);
+        return;
+      }
+    setLoading(false);
     history("/paymentbutton",{state:data});
     } catch (error) {
       console.log(error)
