@@ -37,7 +37,7 @@ try {
       params: {
         merchantTransactionIdFrontend: generatedId,
         mobileNumber: mobileNumber,
-        amount:100,
+        amount:9999*100,
       },
     });
     return response?.data;
