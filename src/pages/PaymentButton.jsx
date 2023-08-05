@@ -15,6 +15,7 @@ const PaymentButton = () => {
   const [paymentUrl, setPaymentUrl] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+  const amount = location?.state?.amount;
   const mobileNumber= location?.state?.mobileNumber
 
   useEffect(()=>{
@@ -28,7 +29,7 @@ const PaymentButton = () => {
   const handleInitiatePayment = async () => {
     try {
       const generatedId = "TXN_" + generateMerchantTransactionId();
-      const res = await payApi(generatedId,mobileNumber);
+      const res = await payApi(generatedId,mobileNumber,amount);
       setPaymentUrl(res);
     } catch (error) {
       console.error('Error occurred:', error);
@@ -46,7 +47,7 @@ const PaymentButton = () => {
   hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
 >
   <div>Make Payment</div>
-  <div className="text-lg font-bold">Rs. 9,999</div>
+  <div className="text-lg font-bold">Rs. {amount}</div>
 </button>
 
           </a>
