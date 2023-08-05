@@ -57,7 +57,7 @@ const Register = () => {
     try{
    const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
    if(res?.success===false){
-    alert("Duplicate Email address")
+    alert("Already registered Email address")
     setLoading(false);c
     return;
   }
@@ -84,7 +84,7 @@ const Register = () => {
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">Name*</p>
                   <input
-                    placeholder="Vitalik buterin"
+                    placeholder="Enter full name"
                     required={true}
                     onChange={(e) => setUser({ ...user, name: e.target.value })}
                     value={user.name}
@@ -95,7 +95,7 @@ const Register = () => {
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">Email*</p>
                   <input
-                    placeholder="vitalik@isking.eth"
+                    placeholder="Enter email address"
                     onChange={(e) =>
                       setUser({ ...user, email: e.target.value })
                     }
@@ -109,7 +109,7 @@ const Register = () => {
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">Phone Number*</p>
                   <input
-                    placeholder="Enter your phone number "
+                    placeholder="Enter phone number "
                     onChange={(e) =>
                       setUser({ ...user, phone_no: e.target.value })
                     }
@@ -163,7 +163,7 @@ const Register = () => {
                 <div>
                   <p className="ml-2 mb-2 text-[16px]">Coupon Code</p>
                   <input
-                    placeholder="Ex: BOOTCAMP2023"
+                    placeholder="BOOTCAMP2023"
                     onChange={(e) =>
                       setUser({ ...user, coupon: e.target.value })
                     }
