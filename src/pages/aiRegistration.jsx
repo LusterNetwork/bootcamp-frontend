@@ -65,10 +65,13 @@ const AiRegistration = () => {
     if(user.coupon==="DIVYANSHU1000"){
       amount=8999;
     }
+ 
     const data = {
       mobileNumber:user.phone_no,
       amount:amount,
+      email:user.email,
     }
+    
     try{
       const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
       if(res?.success===false){
