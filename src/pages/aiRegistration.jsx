@@ -71,19 +71,19 @@ const AiRegistration = () => {
       email:user.email,
     }
     console.log(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
-    // try{
-    //   const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
-    //   if(res?.success===false){
-    //     alert("Already registered Email address")
-    // setLoading(false);
-    //     return;
-    //   }
-    // setLoading(false);
-    // history("/paymentbutton",{state:data});
-    // } catch (error) {
-    //   console.log(error)
-    // setLoading(false);
-    // }
+    try{
+      const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+      if(res?.success===false){
+        alert("Already registered Email address")
+    setLoading(false);
+        return;
+      }
+    setLoading(false);
+    history("/paymentbutton",{state:data});
+    } catch (error) {
+      console.log(error)
+    setLoading(false);
+    }
   }
 
   return (
