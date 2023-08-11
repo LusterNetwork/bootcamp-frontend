@@ -1,2 +1,3 @@
 # bootcamp-frontend
-Main site for bootcamp for luster network
+Main site for bootcamp for Luster Network
+

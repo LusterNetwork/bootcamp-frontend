@@ -19,13 +19,13 @@ export const registerStudents=async(name,email,phone_no,experience,bootcamp,coup
     }
 }
 
-export const payApi= async(generatedId,mobileNumber,amount)=>{
+export const payApi= async(mobileNumber,amount,email)=>{
 try {
     const response = await axios.get(`${BASE_URL}/pay`, {
       params: {
-        merchantTransactionIdFrontend: generatedId,
         mobileNumber: mobileNumber,
         amount:amount*100,
+        email:email,
       },
     });
     return response?.data;
