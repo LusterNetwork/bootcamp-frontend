@@ -7,9 +7,9 @@ const AiRegistration = () => {
     name: "",
     phone_no: "",
     email: "",
-    experience: "",
+    experience: "Beginner",
     coupon: "",
-    bootcamp: "",
+    bootcamp: "AI",
   });
   const [loading, setLoading] = useState(false);
   const history = useNavigate();
@@ -18,9 +18,8 @@ const AiRegistration = () => {
     e.preventDefault();
     // Regular expressions for email and phone number format
     const emailRegex = /^\S+@\S+\.\S+$/;
-    const phoneRegex = /^(\+?\d{1,3}[-. ]?)?\d{10}$/;
+    const phoneRegex = /^(\+?\d{1,3}[-. ]?)?\d{1,}$/;
     // Object to store error messages
-    const errors = {};
 
     if (!user.name) {
       alert("Please enter your name");
@@ -71,20 +70,20 @@ const AiRegistration = () => {
       amount:amount,
       email:user.email,
     }
-    
-    try{
-      const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
-      if(res?.success===false){
-        alert("Already registered Email address")
-    setLoading(false);
-        return;
-      }
-    setLoading(false);
-    history("/paymentbutton",{state:data});
-    } catch (error) {
-      console.log(error)
-    setLoading(false);
-    }
+    console.log(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+    // try{
+    //   const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+    //   if(res?.success===false){
+    //     alert("Already registered Email address")
+    // setLoading(false);
+    //     return;
+    //   }
+    // setLoading(false);
+    // history("/paymentbutton",{state:data});
+    // } catch (error) {
+    //   console.log(error)
+    // setLoading(false);
+    // }
   }
 
   return (
@@ -124,18 +123,25 @@ const AiRegistration = () => {
                 </div>
 
                 <div className="">
-                  <p className="ml-2 mb-2 text-[16px]">Phone Number*</p>
-                  <input
-                    placeholder="Enter phone number "
-                    onChange={(e) =>
-                      setUser({ ...user, phone_no: e.target.value })
-                    }
-                    required={true}
-                    type="tel"
-                    value={user.phone_no}
-                    className="bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
-                  />
-                </div>
+  <p className="ml-2 mb-2 text-[16px]">Phone Number*</p>
+  <input
+    placeholder="Enter phone number"
+    onChange={(e) =>
+      setUser({ ...user, phone_no: e.target.value })
+    }
+    onKeyPress={(e) => {
+      const onlyNumbers = /^[0-9\b]+$/;
+      if (!onlyNumbers.test(e.key)) {
+        e.preventDefault();
+      }
+    }}
+    required={true}
+    type="tel"
+    value={user.phone_no}
+    className="bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
+  />
+</div>
+
 
                 <div className="">
                   <p className="ml-2 mb-2 text-[16px]">
@@ -168,10 +174,9 @@ const AiRegistration = () => {
                       setUser({ ...user, bootcamp: e.target.value })
                     }
                     value={user.bootcamp}
-                    placeholder="Experiance"
+                    placeholder="Experience"
                     className=" bg-gray-900 px-6 h-[45px] w-[15rem] md:w-[24rem] border outline-1 outline-blue-200 border-blue-900 rounded-md"
                   >
-                    <option value="Select bootcamp">Select bootcamp</option>
                     <option value="AI">Artificial Intelligence</option>
                   </select>
                 </div>
