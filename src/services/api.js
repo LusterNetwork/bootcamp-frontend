@@ -24,7 +24,7 @@ try {
     const response = await axios.get(`${BASE_URL}/pay`, {
       params: {
         mobileNumber: mobileNumber,
-        amount:1*100,
+        amount:amount*100,
         email:email,
       },
     });
