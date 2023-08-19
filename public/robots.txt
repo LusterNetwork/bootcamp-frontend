@@ -1,0 +1,12 @@
+User-agent: *
+
+# Allow specific pages
+Allow: /
+Allow: /bootcamps/ethereum
+Allow: /bootcamps/aibootcamp
+
+# Block access to all other pages
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.luster.network/sitemap.xml

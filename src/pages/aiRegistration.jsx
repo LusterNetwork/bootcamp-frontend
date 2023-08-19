@@ -70,7 +70,7 @@ const AiRegistration = () => {
       amount:amount,
       email:user.email,
     }
-    console.log(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
+    
     try{
       const res = await registerStudents(user.name,user.email,user.phone_no,user.experience,user.bootcamp,user.coupon)
       if(res?.success===false){
