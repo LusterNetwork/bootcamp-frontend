@@ -41,7 +41,7 @@ const Header = () => {
     <ul className="bg-slate-900 
     flex flex-col items-center text-center text-lg rounded-md transition-all ">
      <li className="pt-2 cursor-pointer">
-    <Link to="/" className="" onClick={handleOptionClick}>
+    <Link to="https://errorocean.luster.network/" className="" onClick={handleOptionClick}>
       errorOcean
     </Link>
   </li>
@@ -94,10 +94,7 @@ const Header = () => {
               <ul className="flex items-center gap-8">
                 <li className="cursor-pointer hover:underline transition-all">
                     <Link
-                      to="/"
-                      onClick={() =>
-                        setTimeout(() => (window.location.href = "/#POE"), 0)
-                      }
+                      to="https://errorocean.luster.network/"
                     >
                       errorOcean
                     </Link>
