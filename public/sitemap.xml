@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-  <loc>https://www.luster.network/</loc>
-  <lastmod>2023-08-17T16:47:02+00:00</lastmod>
-</url>
+    <!-- Home Page -->
+    <url>
+        <loc>https://www.luster.network/</loc>
+        <lastmod>2023-08-17T16:47:02+00:00</lastmod>
+        <priority>1.0</priority>
+    </url>
 
+    <!-- Ethereum Bootcamp Page -->
+    <url>
+        <loc>https://www.luster.network/bootcamps/ethereum</loc>
+        <lastmod>2023-08-20T10:15:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- AI Bootcamp Page -->
+    <url>
+        <loc>https://www.luster.network/bootcamps/aibootcamp</loc>
+        <lastmod>2023-08-18T14:30:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
 
 </urlset>
