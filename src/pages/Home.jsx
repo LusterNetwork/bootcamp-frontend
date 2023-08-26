@@ -126,7 +126,7 @@ const Home = () => {
           className="box-content flex flex-col justify-center shadow-xl
    bg-black hover:border-2 border-white rounded-md md:w-[70%] lg:w-[70%] xl:w-[70%] sm:w-[100%] "
         >
-          <p className="text-center my-6 text-white text-4xl font-semibold font-bruno">errorOcean</p>
+          <p className="text-center my-6 text-white text-4xl font-semibold font-bruno">error Ocean</p>
           <p className="text-white ml-10 text-xl leading-10 font-orbitron">Hey, are you looking for a solution to your wired errors...</p>
           <p className="text-white ml-10 text-xl leading-10 font-orbitron">So, don't worry head over to the errorOcean</p>
           <p
