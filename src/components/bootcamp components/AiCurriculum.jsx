@@ -1,9 +1,10 @@
 import React from 'react'
 import {BsPlusLg, BsClock} from "react-icons/bs"
 import {IoMdDownload} from "react-icons/io"
+import { useLocation } from 'react-router-dom'
 
 const AiCurriculum = () => {
-
+const location = useLocation().pathname.split("/");
     const content = [
         {
           title: "Introduction to AI",
@@ -66,7 +67,9 @@ const AiCurriculum = () => {
         shadow-lg border-2 p-6 md:px-8">
   <div className="flex flex-col items-center justify-center text-center md:mr-8 mb-4 md:mb-0">
     <div className="rounded-full bg-white w-16 h-16 flex items-center justify-center mb-3">
-      <p className="text-4xl text-indigo-900 font-semibold">16</p>
+      <p className="text-4xl text-indigo-900 font-semibold">{
+        location[1]==="aiworkshop"?4:16
+      }</p>
     </div>
     <p className="text-lg font-medium text-white">Hours of learning</p>
   </div>
@@ -80,7 +83,9 @@ const AiCurriculum = () => {
 
   <div className="flex flex-col items-center justify-center text-center md:mr-8 mb-4 md:mb-0">
     <div className="rounded-full bg-white w-16 h-16 flex items-center justify-center mb-3">
-      <p className="text-4xl text-indigo-900 font-semibold">4</p>
+      <p className="text-4xl text-indigo-900 font-semibold">{
+        location[1]==="aiworkshop"?2:4
+      }</p>
     </div>
     <p className="text-lg font-medium text-white">AI Projects</p>
   </div>

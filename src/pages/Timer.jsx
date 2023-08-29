@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { MdCancel } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Timer = ({ isShow, func }) => {
+  const location = useLocation().pathname?.split("/");
   const MINUTES = 1000 * 60;
   const SECONDS = 1000;
 
@@ -65,7 +66,9 @@ const Timer = ({ isShow, func }) => {
           <MdCancel size={24} />
         </button>
         <h2 className="text-lg md:text-3xl font-extrabold mb-4 font-bruno text-green-600">
-          Early Bird Offer: Rs. 9999 only
+          Early Bird Offer: Rs.{
+        location[1]==="aiworkshop"?199:9999
+      } only
         </h2>
         <div className="flex items-center justify-center space-x-1 md:space-x-2 text-center">
           <div className="flex flex-col items-center m-1 md:m-2 p-2 bg-slate-200 rounded-lg">
@@ -94,7 +97,7 @@ const Timer = ({ isShow, func }) => {
             Limited Time Offer
           </p>
           <Link
-            to="/airegistration"
+            to={`/airegistration/${location[1]}`}
             className="h-10 md:h-12 mt-2 px-6 md:px-8 font-bold text-base md:text-xl flex items-center justify-center
           rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors 
           hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"

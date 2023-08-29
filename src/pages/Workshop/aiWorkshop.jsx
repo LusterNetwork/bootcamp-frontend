@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { AiCurriculum } from "../../components/bootcamp components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BsLinkedin,
   BsPlusLg,
@@ -32,7 +32,7 @@ const AiWorkshop = () => {
   );
   const[isShow,setIsShow]=useState(true);
   const [isMouseHover, setIsMouseHover] = useState(false);
-
+  const location = useLocation().pathname.split("/");
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsShow(true);
@@ -82,7 +82,7 @@ const AiWorkshop = () => {
           <div className="container">
             <div className="mt-10 bg-gradient-to-bl from-gray-700 via-gray-900 to-black text-white pt-10 pb-16 px-8 rounded-lg shadow-lg">
               <h1 className="text-3xl leading-relaxed md:leading-none md:text-4xl font-bold text-center mb-16 font-bruno tracking-wider">
-                Become an Entry-Level AI/ML Developer within 1 Month
+              Mastering AI/ML Prompt Engineering: Unleash the Power of ChatGPT
               </h1>
               <div className="flex flex-col space-y-4">
                 <p className="text-lg md:text-xl text-center font-orbitron">
@@ -97,7 +97,7 @@ const AiWorkshop = () => {
           </div>
           <div className="button md:mt-8 mt-4">
             <Link
-              to="/airegistration"
+              to={`/airegistration/${location[1]}`}
               className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               <button>Register now!</button>
@@ -195,7 +195,7 @@ const AiWorkshop = () => {
 
           <div className="button mt-4">
             <a
-              href="/airegistration"
+              href={`/airegistration/${location[1]}`}
               className="font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               <button>Register now !</button>
@@ -245,7 +245,7 @@ const AiWorkshop = () => {
               What is holding you back?
             </p>
             <Link
-              to="/airegistration"
+                          to={`/airegistration/${location[1]}`}
               className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               Register now!
@@ -406,7 +406,7 @@ const AiWorkshop = () => {
               </div>
 
               <Link
-                to="/airegistration"
+                            to={`/airegistration/${location[1]}`}
                 className="font-orbitron h-[4rem] text-3xl transform duration-500 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center animate-bounce hover:animate-none hover:scale-125 transition-all"
               >
                 Register now!
@@ -456,7 +456,9 @@ const AiWorkshop = () => {
 </div>
 
 
-  <a href="/airegistration" class="mt-6 px-8 py-3 text-lg font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
+  <a
+              href={`/airegistration/${location[1]}`}
+    class="mt-6 px-8 py-3 text-lg font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
     Register Now
   </a>
 </section>
@@ -509,7 +511,7 @@ const AiWorkshop = () => {
   </div>
 
   <Link
-          to="/airegistration"
+                        to={`/airegistration/${location[1]}`}
           class="h-12 px-8 mt-16 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
         >
           Register Now

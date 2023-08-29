@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { AiCurriculum } from "../../components/bootcamp components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BsLinkedin,
   BsPlusLg,
@@ -32,6 +32,7 @@ const AiBootcamp = () => {
   );
   const[isShow,setIsShow]=useState(true);
   const [isMouseHover, setIsMouseHover] = useState(false);
+  const location = useLocation().pathname.split("/");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -97,7 +98,7 @@ const AiBootcamp = () => {
           </div>
           <div className="button md:mt-8 mt-4">
             <Link
-              to="/airegistration"
+              to={`/airegistration/${location[2]}`}
               className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               <button>Register now!</button>
@@ -195,7 +196,7 @@ const AiBootcamp = () => {
 
           <div className="button mt-4">
             <a
-              href="/airegistration"
+             href={`/airegistration/${location[1]}`}
               className="font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               <button>Register now !</button>
@@ -245,7 +246,7 @@ const AiBootcamp = () => {
               What is holding you back?
             </p>
             <Link
-              to="/airegistration"
+              to={`/airegistration/${location[2]}`}
               className="font-orbitron h-[4rem] text-3xl transform transition duration-500 hover:scale-105 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center"
             >
               Register now!
@@ -406,7 +407,7 @@ const AiBootcamp = () => {
               </div>
 
               <Link
-                to="/airegistration"
+               to={`/airegistration/${location[2]}`}
                 className="font-orbitron h-[4rem] text-3xl transform duration-500 my-2 flex font-semibold border-transparent rounded-lg items-center w-[15rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center animate-bounce hover:animate-none hover:scale-125 transition-all"
               >
                 Register now!
@@ -456,7 +457,9 @@ const AiBootcamp = () => {
 </div>
 
 
-  <a href="/airegistration" class="mt-6 px-8 py-3 text-lg font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
+  <a 
+   href={`/airegistration/${location[2]}`}
+   class="mt-6 px-8 py-3 text-lg font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]">
     Register Now
   </a>
 </section>
@@ -509,7 +512,7 @@ const AiBootcamp = () => {
   </div>
 
   <Link
-          to="/airegistration"
+          to={`/airegistration/${location[2]}`}
           class="h-12 px-8 mt-16 text-xl flex items-center justify-center font-medium rounded-md bg-gradient-to-r from-[#58AFEF] to-[#9374DC] text-white transition-colors hover:bg-[#9374DC] hover:from-[#58AFEF] hover:to-[#9374DC]"
         >
           Register Now

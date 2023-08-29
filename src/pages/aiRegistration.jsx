@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { registerStudents } from "../services/api";
 
 const AiRegistration = () => {
+  const id = useParams().id;
+  console.log(id);
   const [user, setUser] = useState({
     name: "",
     phone_no: "",
@@ -61,13 +63,14 @@ const AiRegistration = () => {
   
   const sendRequest=async()=>{
     let amount=9999;
+
     if(user.coupon==="DIVYANSHU1000"){
       amount=8999;
     }
  
     const data = {
       mobileNumber:user.phone_no,
-      amount:amount,
+      amount:id==="aiworkshop"?199:amount,
       email:user.email,
     }
     

@@ -36,7 +36,7 @@ const App = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/terms" element={<Terms />} />
-          <Route path="/airegistration" element={<AiRegistration />} />
+          <Route path="/airegistration/:id" element={<AiRegistration />} />
           <Route path="/paymentbutton" element={<PaymentButton />} />
           <Route path="/bootcamps">
             <Route path="ethereum" element={<Ethereum />} /> {/* Added a missing slash before "ethereum" */}
