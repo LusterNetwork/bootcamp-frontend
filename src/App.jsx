@@ -17,6 +17,7 @@ import { Navbar, Footer } from "./components/layout components";
 import Refund from "./pages/Refund";
 import ExcelDownload from "./pages/ExcelDownload";
 import Quiz from "./pages/Quiz/Quiz";
+import AiWorkshop from "./pages/Workshop/aiWorkshop";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/brainteaser" element={<Quiz />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/aiworkshop" element={<AiWorkshop />} />
           <Route path="/aboutus" element={<AboutUS />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/dcma" element={<DCMA />} />
