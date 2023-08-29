@@ -126,28 +126,28 @@ const Home = () => {
           className="box-content flex flex-col justify-center shadow-xl
    bg-black hover:border-2 border-white rounded-md md:w-[70%] lg:w-[70%] xl:w-[70%] sm:w-[100%] "
         >
+          <p className="text-center my-6 text-white text-4xl font-semibold font-bruno">error Ocean</p>
+          <p className="text-white ml-10 text-xl leading-10 font-orbitron">Hey, are you looking for a solution to your wired errors...</p>
+          <p className="text-white ml-10 text-xl leading-10 font-orbitron">So, don't worry head over to the errorOcean</p>
           <p
-            className="text-white text-xl mt-12 mx-5 md:text-2xl font-bold"
+            className="text-white text-xl mt-4 mx-5 md:text-2xl font-bold"
             style={{ lineHeight: "3rem" }}
           >
-            <ul className="list-disc ml-10">
+            <ul className="list-disc ml-10 font-orbitron">
               <li>
-                Web3 Garage - Open Source Web3 Developer Community
+                Learn new technology stack for free
                 <br />
               </li>
               <li>
-                Post solutions to contribute to open source
+                Connect with technology expert
                 <br />
               </li>
               <li>
                 {" "}
-                Showcase your contribution to recruiters
+                # Web3 #Blockchain #error #Al #ML #Community
                 <br />
               </li>
-              <li> Post errors</li>
             </ul>
-            {/* Creating Community for all Web3 Developer and Enthusiast Around the Globe for free,
-  you must need to */}
           </p>
           <div className="flex justify-end mx-8 my-4">
             <Link
