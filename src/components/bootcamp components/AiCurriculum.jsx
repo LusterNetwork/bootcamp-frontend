@@ -74,7 +74,7 @@ const AiCurriculum = () => {
           form of live Sessions, {location[1] === "aiworkshop" ? 4 : 16}
           &nbsp; hours of learning, {location[1] === "aiworkshop" ? 2 : 4}&nbsp;
             AI projects, doubt
-          soling...
+          solving...
         </p>
         <a href="/AI_Curriculum.pdf" download="AI_Curriculum.pdf">
           <button className="font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center ">
