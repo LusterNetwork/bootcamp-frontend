@@ -71,8 +71,10 @@ const AiCurriculum = () => {
       <div className="flex flex-col md:flex-row mb-12 md:justify-between items-center">
         <p className="md:w-[80%] text-lg md:text-2xl font-orbitron">
           Best in-class content by leading faculty and industry leaders in the
-          form of live Sessions, 16 hours of learning, 4 AI projects, doubt
-          solving...
+          form of live Sessions, {location[1] === "aiworkshop" ? 4 : 16}
+          &nbsp; hours of learning, {location[1] === "aiworkshop" ? 2 : 4}&nbsp;
+            AI projects, doubt
+          soling...
         </p>
         <a href="/AI_Curriculum.pdf" download="AI_Curriculum.pdf">
           <button className="font-orbitron h-[3rem] text-2xl transform transition duration-500 hover:scale-125 my-2 flex font-semibold border-transparent rounded-lg items-center w-[12rem] bg-gradient-to-r from-[#58AFEF] to-[#9374DC]  justify-center ">
