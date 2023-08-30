@@ -54,12 +54,25 @@ const AiCurriculum = () => {
 
   const workshop=[
    {
-    desc:"The Art of Prompt Engineering Uncover the artistry behind crafting prompts that yield insightful AI-powered responses. Learn the techniques to refine prompts for desired outcomes."
+    title:"The Art of Prompt Engineering:",
+    desc:"Uncover the artistry behind crafting prompts that yield insightful AI-powered responses. Learn the techniques to refine prompts for desired outcomes."
    },
-   {desc:"Navigating ChatGPT Dive into the workings of ChatGPT, a cutting-edge language model. Understand how it interprets prompts and generates contextually relevant outputs."},
-   {desc:"Real-world Use Cases of AI/ML and ChatGPT Explore practical applications of AI/ML and ChatGPT across industries. From content generation to customer interactions, discover how businesses leverage these technologies."},
-   {desc:"Elevate Your Career Prospects Gain insights into how AI/ML expertise, particularly in Prompt Engineering, can give you a competitive edge in the job market. Learn about the burgeoning demand and attractive salaries."},
-   {desc:"Crafting Your AI/ML Career Roadmap Get a sneak peek into the roadmap of an AI/ML career. Understand the various roles, skill progression, and areas of specialization to help you chart your own success path."},
+   {
+    title:"Navigating ChatGPT",
+    desc:"Dive into the workings of ChatGPT, a cutting-edge language model. Understand how it interprets prompts and generates contextually relevant outputs."
+  },
+   {
+    title:"Real-world Use Cases of AI/ML and ChatGPT",
+    desc:"Explore practical applications of AI/ML and ChatGPT across industries. From content generation to customer interactions, discover how businesses leverage these technologies."
+  },
+   {
+    title:"Elevate Your Career Prospects",
+    desc:"Gain insights into how AI/ML expertise, particularly in Prompt Engineering, can give you a competitive edge in the job market. Learn about the burgeoning demand and attractive salaries."
+  },
+   {
+    title:"Crafting Your AI/ML Career Roadmap",
+    desc:"Get a sneak peek into the roadmap of an AI/ML career. Understand the various roles, skill progression, and areas of specialization to help you chart your own success path."
+  },
 
   ]
 
@@ -147,11 +160,18 @@ const AiCurriculum = () => {
                   ></input>
                   <div className="flex items-center cursor-pointer justify-between">
                     <div className="p-5">
-                      <p className=" m-0 text-lg   font-orbitron">
-                        {item.desc}
+                      <p className=" m-0 text-lg font-semibold font-orbitron">
+                        {item.title}
                       </p>
                     </div>
+                    {i != 6 && (
+                      <BsPlusLg className=" h-12 float-right peer-checked:rotate-45 peer-checked:text-indigo-500 mr-4" />
+                    )}
                   </div>
+                        <div className="bg-gray-900 text-lg 
+                          max-h-0 peer-checked:max-h-48">
+                          <p className="p-5 my-auto font-orbitron">{item.desc}</p>
+                        </div>
                 </label>
               </div>
             </>

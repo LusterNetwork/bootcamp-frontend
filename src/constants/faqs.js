@@ -1,7 +1,7 @@
 export const faqs = [
     {
         ques:"Who is eligible for this course?",
-        ans:"Any working professional or student who is web3 enthusiasts are eligible"
+        ans:"Working professional, students, a normal person, etc. are eligible to attend the workshop."
     },
     {
         ques:"How will my doubts get solved?",

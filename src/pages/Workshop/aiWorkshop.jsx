@@ -398,10 +398,10 @@ const AiWorkshop = () => {
                onTouchStart={handleTypedMouseEnter}
                className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
                 <div className="text-3xl md:text-5xl font-bold mb-1 font-orbitron">
-                  ₹9,999 Only for first 50 students
+                  ₹199 Only for first 50 students
                 </div>
                 <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron ">
-                <span className="line-through">₹19,999</span>  afterwards
+                <span className="line-through">₹999</span>  afterwards
                 </div>
               </div>
 
