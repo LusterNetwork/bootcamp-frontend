@@ -13,6 +13,16 @@ import { reviews } from "../../constants";
 import { faqs } from "../../constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Typed from "react-typed";
+import Career from '../../../public/assets/carrer.png'
+import Homework from '../../../public/assets/homework.png'
+import Development from '../../../public/assets/development.png'
+import Profile from '../../../public/assets/profile.png'
+import Voice from '../../../public/assets/voice.png'
+import Knowledge from '../../../public/assets/knowledge.png'
+import Interview from '../../../public/assets/interview.png'
+import Resume from '../../../public/assets/resume.png'
+import Skill from '../../../public/assets/skill.png'
+import Learning from '../../../public/assets/learning.png'
 
 // Import Swiper styles
 import "swiper/css";
@@ -309,62 +319,72 @@ const AiWorkshop = () => {
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="p-4 rounded-lg bg-white shadow-lg">
-        <h3 className="text-xl text-black font-semibold mb-4">Software Engineers</h3>
+        <h3 className="text-2xl text-black font-semibold mb-4">Software Engineers</h3>
         <ul className="list-disc pl-4 text-justify">
-          <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Skill Enhancement:</strong> Prompt engineering allows IT professionals to practice real-world scenarios, helping them improve problem-solving skills and stay up-to-date with the latest industry trends.
-            </p>
-          </li>
-          <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Efficient Learning:</strong> AI/ML tools can offer personalized learning paths, suggesting relevant resources and courses, aiding IT professionals in acquiring new skills efficiently.
-            </p>
-          </li>
-          <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Knowledge Expansion:</strong> ChatGPT can act as a virtual mentor, answering queries, explaining complex concepts, and providing insights, enabling professionals to broaden their understanding.
-            </p>
-          </li>
-          <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Resume/CV Refinement:</strong> By utilizing AI, professionals can optimize their resumes/CVs with relevant keywords and formats that match job descriptions, increasing their chances of getting noticed by recruiters.
-            </p>
-          </li>
-          <li>
-            <p className="text-gray-700">
-              <strong>Interview Preparation:</strong> ChatGPT can simulate interview scenarios, helping IT professionals practice responses to common questions and refine their communication skills for technical interviews.
-            </p>
-          </li>
-        </ul>
+  <li className="mb-4">
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-5">
+      <img src={Skill} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium">Skill Enhancement</p>
+    </div>
+  </li>
+  <li className="mb-4">
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-5">
+    <img src={Learning} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium">Efficient Learning</p>
+    </div>
+  </li>
+  <li className="mb-4">
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-5">
+        <img src={Knowledge} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium">Knowledge Expansion</p>
+    </div>
+  </li>
+  <li className="mb-4">
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-5">
+         <img src={Resume} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium">Resume/CV Refinement</p>
+    </div>
+  </li>
+  <li className="mb-4">
+    <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-5">
+        <img src={Interview} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium">Interview Preparation</p>
+    </div>
+  </li>
+</ul>
       </div>
       <div className="p-4 rounded-lg bg-white shadow-lg">
-        <h3 className="text-xl text-black font-semibold mb-4">Students</h3>
+        <h3 className="text-2xl text-black font-semibold mb-4">Students</h3>
         <ul className="list-disc pl-4 text-justify">
           <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Personalized Learning:</strong> AI/ML tools can analyze learning patterns and preferences, tailoring study materials and resources to individual students, enhancing their understanding and retention.
-            </p>
+          <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+        <img src={Profile} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium text-center">Personalized Learning</p>
+    </div>
           </li>
           <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Career Guidance:</strong> ChatGPT can provide insights into various career paths based on a student's interests, skills, and market demand, assisting them in making informed decisions.
-            </p>
+           <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+         <img src={Career} class="w-16 h-160 mb-2"/>
+      <p class="text-lg font-medium text-center">Career Guidance</p>
+    </div>
           </li>
           <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Homework and Project Assistance:</strong> Students can use AI-powered tools to get explanations, suggestions, and guidance on assignments and projects, fostering deeper learning and better grades.
-            </p>
+            <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+        <img src={Homework} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium text-center">Homework and Project Assistance</p>
+    </div>
           </li>
           <li className="mb-2">
-            <p className="text-gray-700">
-              <strong>Skill Development:</strong> Prompt engineering helps students practice practical applications of concepts, improving problem-solving skills and making them more industry-ready upon graduation.
-            </p>
+            <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+       <img src={Development} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium text-center">Skill Development</p>
+    </div>
           </li>
           <li>
-            <p className="text-gray-700">
-              <strong>Language and Communication Skills:</strong> ChatGPT can help students improve their writing and communication skills by offering suggestions, corrections, and explanations, which are valuable in both academic and professional contexts.
-            </p>
+             <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
+        <img src={Voice} class="w-16 h-16 mb-2"/>
+      <p class="text-lg font-medium text-center">Language and Communication Skills</p>
+    </div>
           </li>
         </ul>
       </div>
@@ -573,7 +593,7 @@ const AiWorkshop = () => {
 
       {/* Outcome */}
       <section class="flex flex-col items-center justify-center px-8 mx-2 md:mx-24 lg:mx-24 xl:mx-24">
-  <h2 class="text-4xl font-bold text-gray-900 mb-8 leading-relaxed">Outcomes</h2>
+  <h2 class="text-4xl font-bold text-white mb-8 leading-relaxed">Outcomes</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     <div class="flex flex-col items-center justify-center space-y-4 text-white bg-gray-800 rounded-lg p-6">
@@ -601,7 +621,7 @@ const AiWorkshop = () => {
       <svg class="w-12 h-12 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M4 8a1 1 0 01-1-1V4a1 1 0 112 0v3a1 1 0 01-1 1zm12-1a1 1 0 00-1-1V4a1 1 0 00-2 0v3a1 1 0 01-1 1H9a1 1 0 01-1-1V4a1 1 0 00-2 0v3a3 3 0 003 3h4a3 3 0 003-3V4a1 1 0 00-2 0v3zm-1 3H9a1 1 0 00-1 1v6a1 1 0 001 1h6a1 1 0 001-1v-6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
       </svg>
-      <p class="text-lg font-medium text-center">4 Real-World AI Projects</p>
+      <p class="text-lg font-medium text-center">2 Real-World AI Projects</p>
     </div>
   </div>
 
