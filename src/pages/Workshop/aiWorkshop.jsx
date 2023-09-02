@@ -291,13 +291,7 @@ const AiWorkshop = () => {
           />
           <div className="text-center flex flex-col items-center justify-center md:px-16 z-10">
             <p className="text-2xl mb-6 md:5b-0 md:text-5xl font-bruno">
-              <span className="hr2">Batch for</span>{" "}
-              <span className="hr3">AI</span>{" "}
-              <span className="hr2">Enthusiasts</span>
-            </p>
-            <p className="text-2xl md:text-2xl md:w-[70%] text-center font-orbitron">
-              A project orientated program for working professionals and
-              students on weekends{" "}
+              <span className="hr2">Get Rs. 1000 worth EBook</span>{" "}
             </p>
           </div>
           <img
@@ -307,6 +301,77 @@ const AiWorkshop = () => {
           />
         </div>
       </section>
+
+      <section className="bg-blue-100 py-16 px-4 sm:px-6 lg:px-8 mb-20">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 font-bruno">
+      Who is this workshop for?
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="p-4 rounded-lg bg-white shadow-lg">
+        <h3 className="text-xl text-black font-semibold mb-4">Software Engineers</h3>
+        <ul className="list-disc pl-4 text-justify">
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Skill Enhancement:</strong> Prompt engineering allows IT professionals to practice real-world scenarios, helping them improve problem-solving skills and stay up-to-date with the latest industry trends.
+            </p>
+          </li>
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Efficient Learning:</strong> AI/ML tools can offer personalized learning paths, suggesting relevant resources and courses, aiding IT professionals in acquiring new skills efficiently.
+            </p>
+          </li>
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Knowledge Expansion:</strong> ChatGPT can act as a virtual mentor, answering queries, explaining complex concepts, and providing insights, enabling professionals to broaden their understanding.
+            </p>
+          </li>
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Resume/CV Refinement:</strong> By utilizing AI, professionals can optimize their resumes/CVs with relevant keywords and formats that match job descriptions, increasing their chances of getting noticed by recruiters.
+            </p>
+          </li>
+          <li>
+            <p className="text-gray-700">
+              <strong>Interview Preparation:</strong> ChatGPT can simulate interview scenarios, helping IT professionals practice responses to common questions and refine their communication skills for technical interviews.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div className="p-4 rounded-lg bg-white shadow-lg">
+        <h3 className="text-xl text-black font-semibold mb-4">Students</h3>
+        <ul className="list-disc pl-4 text-justify">
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Personalized Learning:</strong> AI/ML tools can analyze learning patterns and preferences, tailoring study materials and resources to individual students, enhancing their understanding and retention.
+            </p>
+          </li>
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Career Guidance:</strong> ChatGPT can provide insights into various career paths based on a student's interests, skills, and market demand, assisting them in making informed decisions.
+            </p>
+          </li>
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Homework and Project Assistance:</strong> Students can use AI-powered tools to get explanations, suggestions, and guidance on assignments and projects, fostering deeper learning and better grades.
+            </p>
+          </li>
+          <li className="mb-2">
+            <p className="text-gray-700">
+              <strong>Skill Development:</strong> Prompt engineering helps students practice practical applications of concepts, improving problem-solving skills and making them more industry-ready upon graduation.
+            </p>
+          </li>
+          <li>
+            <p className="text-gray-700">
+              <strong>Language and Communication Skills:</strong> ChatGPT can help students improve their writing and communication skills by offering suggestions, corrections, and explanations, which are valuable in both academic and professional contexts.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* mentor section */}
       <section className="flex flex-col text-center min-h-[90vh] mb-16">
@@ -631,7 +696,7 @@ const AiWorkshop = () => {
         })}
       </section>
     </main>
-    {isShow && <Timer func={setIsShow} isShow={isShow}/>}
+    {/* {isShow && <Timer func={setIsShow} isShow={isShow}/>} */}
     </>
   );
 };
