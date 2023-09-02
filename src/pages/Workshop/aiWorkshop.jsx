@@ -59,6 +59,36 @@ const AiWorkshop = () => {
         setIsMouseHover(true)
       }
     };
+
+    const initialTimer = parseInt(localStorage.getItem('remainingTime'), 10) || 30   * 60;
+    const [timer, setTimer] = useState(initialTimer);
+  
+    const formatTime = (time) => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    };
+  
+    useEffect(() => {
+      if (timer === 0) {
+        // Reset the timer to 30 minutes when it reaches zero
+        setTimer(30 * 60);
+      }
+  
+      const timerInterval = setInterval(() => {
+        if (timer > 0) {
+          setTimer(timer - 1);
+        }
+      }, 1000);
+  
+      return () => {
+        clearInterval(timerInterval);
+      };
+    }, [timer]);
+  
+    useEffect(() => {
+      localStorage.setItem('remainingTime', timer.toString());
+    }, [timer]);
     
   return (
     <>
@@ -398,7 +428,7 @@ const AiWorkshop = () => {
                onTouchStart={handleTypedMouseEnter}
                className="items-center shadow-md  bg-gradient-to-r from-[#58AFEF] to-[#9374DC] rounded-[15px] py-8 pt-8 px-8">
                 <div className="text-3xl md:text-5xl font-bold mb-1 font-orbitron">
-                  ₹199 Only for first 50 students
+                  ₹199 Only for  {formatTime(timer)} minutes
                 </div>
                 <div className="text-3xl mt-6 font-normal  mb-1 font-orbitron ">
                 <span className="line-through">₹999</span>  afterwards
